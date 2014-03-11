@@ -19,10 +19,10 @@ Powerpoint can generate a powerpoint presentaion based on a standard template:
 
     require 'powerpoint'
     
-    @deck = Powerpoint::Presentation.new 'test.pptx'
+    @deck = Powerpoint::Presentation.new
     @deck.add_intro 'Bicycle Of the Mind', 'created by Steve Jobs'
     @deck.add_textual_slide 'Why Mac?', ['Its cool!', 'Its light.']
-    @deck.save => '/home/developer/powerpoint/test.pptx'
+    @deck.save ('/home/developer/powerpoint/test.pptx')
   
 
 
