@@ -1,0 +1,51 @@
+= Powerpoint --  for Powerpoint(pptx) files.
+
+powerpoint is a Ruby gem that can generate Powerpont(pptx) slides.
+
+
+== Installation
+
+RubyPowerpont can be used from the command line or as part of a Ruby web framework. To install the gem using terminal, run the following command:
+
+    gem install powerpoint
+
+To use it in Rails, add this line to your Gemfile:
+
+    gem "powerpoint"
+
+
+== Basic Usage
+Powerpoint can generate a powerpoint presentaion based on a standard template:
+
+    require 'powerpoint'
+    
+    @deck = Powerpoint::Presentation.new 'test.pptx'
+    @deck.add_intro 'Bicycle Of the Mind', 'created by Steve Jobs'
+    @deck.add_textual_slide 'Why Mac?', ['Its cool!', 'Its light.']
+    @deck.save => '/home/developer/powerpoint/test.pptx'
+  
+
+
+== Contributing
+
+Contributions are welcomed. You can fork a repository, add your code changes to the forked branch, ensure all existing unit tests pass, create new unit tests cover your new changes and finally create a pull request.
+
+After forking and then cloning the repository locally, install Bundler and then use it
+to install the development gem dependecies:
+
+    gem install bundler
+    bundle install
+
+Once this is complete, you should be able to run the test suite:
+
+    rake
+
+
+== Bug Reporting
+
+Please use the {Issues}[https://github.com/pythonicrubyist/powerpoint/issues] page to report bugs or suggest new enhancements.
+
+
+== License
+
+Powerpoint has been published under {MIT License}[https://github.com/pythonicrubyist/powerpoint/blob/master/LICENSE.txt]
