@@ -1,6 +1,6 @@
-= Powerpoint --  for Powerpoint(pptx) files.
+= powerpoint --  for creating Powerpoint Slides.
 
-powerpoint is a Ruby gem that can generate Powerpont(pptx) slides.
+'powerpoint' is a Ruby gem that can generate Powerpont files(pptx).
 
 
 == Installation
@@ -15,13 +15,19 @@ To use it in Rails, add this line to your Gemfile:
 
 
 == Basic Usage
-Powerpoint can generate a powerpoint presentaion based on a standard template:
+'powerpoint' gem can generate a powerpoint presentaion based on a standard template:
 
     require 'powerpoint'
     
     @deck = Powerpoint::Presentation.new
+
+    # Passing title and subtilite to the introduction slide.
     @deck.add_intro 'Bicycle Of the Mind', 'created by Steve Jobs'
+    
+    # Passing the slide title and content items to a new slide.
     @deck.add_textual_slide 'Why Mac?', ['Its cool!', 'Its light.']
+    
+    # Saving the pptx file to the file system.
     @deck.save ('/home/developer/powerpoint/test.pptx')
   
 
