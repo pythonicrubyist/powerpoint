@@ -30,7 +30,9 @@ module Powerpoint
 
     def save path
       @pptx_path = path
+      File.delete(path) if File.exist?(path)
       Powerpoint.compress_pptx @extract_path, @pptx_path
+      FileUtils.rm_rf(@extract_path)
       path
     end
   end
