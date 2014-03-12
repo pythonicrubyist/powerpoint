@@ -54,6 +54,24 @@ module Powerpoint
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout" Target="../slideLayouts/slideLayout2.xml"/></Relationships>'
         relationship_path = "#{@extract_path}/ppt/slides/_rels/slide#{@slide_count}.xml.rels"
         File.open(relationship_path, 'w'){ |f| f << relationship_xml }
+
+        override_xml = '<Override PartName="/ppt/slides/slide' + @slide_count.to_s + '.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.slide+xml"/></Types>'
+        content_types_path = "#{@extract_path}/[Content_Types].xml"
+        override_template = File.read content_types_path
+        override_template.gsub!('</Types>', override_xml)
+        File.open(content_types_path, 'w'){ |f| f << override_template }
+
+        presentaion_relationship_xml = '<Relationship Id="rId'+ (@slide_count+666).to_s + '" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide" Target="slides/slide' + @slide_count.to_s + '.xml"/></Relationships>'
+        presentaion_relationship_path = "#{@extract_path}/ppt/_rels/presentation.xml.rels"
+        presentaion_relationship_template = File.read presentaion_relationship_path
+        presentaion_relationship_template.gsub!('</Relationships>', presentaion_relationship_xml)
+        File.open(presentaion_relationship_path, 'w'){ |f| f << presentaion_relationship_template }  
+
+        presentaion_xml = '<p:sldId id="257" r:id="rId' + (@slide_count+666).to_s + '"/></p:sldIdLst>'
+        presentaion_path = "#{@extract_path}/ppt/presentation.xml"
+        presentaion_template = File.read presentaion_path
+        presentaion_template.gsub!('</p:sldIdLst>', presentaion_xml)
+        File.open(presentaion_path, 'w'){ |f| f << presentaion_template }    
       end
     end
 
