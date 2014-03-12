@@ -9,6 +9,8 @@ describe 'Powerpoint parsing a sample PPTX file' do
     @deck.add_intro 'Bicycle Of the Mind', 'created by Steve Jobs'
     @deck.add_textual_slide 'Why Mac?', ['Its cool!', 'Its light!']
     @deck.add_textual_slide 'Why Iphone?', ['Its fast!', 'Its cheap!']
+    @deck.add_pictorial_slide 'Logo', 'image1.jpg'
+    @deck.add_textual_slide 'Why Android?', ['Its great!', 'Its sweet!']
     @deck.save 'sample.pptx'
   end
 

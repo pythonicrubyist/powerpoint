@@ -26,6 +26,9 @@ To use it in Rails, add this line to your Gemfile:
     
     # Passing the slide title and content items to a new slide.
     @deck.add_textual_slide 'Why Mac?', ['Its cool!', 'Its light.']
+
+    # Passing the slide title and image path to create a pictorial slide.
+    @deck.add_pictorial_slide 'Everyone loves Macs:', 'image1.jpg'
     
     # Saving the pptx file to the file system.
     @deck.save ('/home/developer/powerpoint/test.pptx')

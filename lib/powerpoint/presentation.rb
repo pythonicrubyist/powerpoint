@@ -20,8 +20,18 @@ module Powerpoint
     def add_textual_slide title, content=[]
       @slide_count += 1
       Powerpoint::Slide::Textual.new @extract_path, title, content, @slide_count
+      Powerpoint::Slide::Relationship.new @extract_path, @slide_count
+      setablish_relationships
+    end
+
+    def add_pictorial_slide title, image_path
+      @slide_count += 1
+      Powerpoint::Slide::Pictorial.new @extract_path, title, image_path, @slide_count
+      setablish_relationships
+    end    
+    
+    def setablish_relationships
       if @slide_count > 2
-        Powerpoint::Slide::Relationship.new @extract_path, @slide_count
         Powerpoint::ContentType.new @extract_path, @slide_count
         Powerpoint::Relationship.new @extract_path, @slide_count
         Powerpoint::Meta.new @extract_path, @slide_count

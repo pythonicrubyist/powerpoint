@@ -4,7 +4,7 @@ require 'fileutils'
 module Powerpoint
   module Slide
     class Powerpoint::Slide::Textual
-      def initialize extract_path, title, content, sllide_number
+      def initialize extract_path, title, content, slide_number
         template_path = "#{TEMPLATE_PATH}/ppt/slides/slide2.xml"
         xml = File.read template_path
 
@@ -18,7 +18,7 @@ module Powerpoint
 
         xml.gsub!('CONTENT_PACEHOLDER', content_xml)
 
-        slide_path = "#{extract_path}/ppt/slides/slide#{sllide_number}.xml"
+        slide_path = "#{extract_path}/ppt/slides/slide#{slide_number}.xml"
         File.open(slide_path, 'w'){ |f| f << xml }
       end
     end
