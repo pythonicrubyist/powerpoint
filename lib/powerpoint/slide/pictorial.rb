@@ -8,8 +8,6 @@ module Powerpoint
       	
       	image_name = File.basename(image_path)
       	FileUtils.copy_file(image_path, "#{extract_path}/ppt/media/#{image_name}")
-        
-        puts image_name.inspect
 
         rel_xml =  '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">

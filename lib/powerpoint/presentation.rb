@@ -8,7 +8,7 @@ module Powerpoint
 
     def initialize
       @slide_count = 0
-      @extract_path =  "extract_#{Time.now.strftime("%Y-%m-%d-%H%M%S")}"
+      @extract_path =  "extracts/extract_#{Time.now.strftime("%Y-%m-%d-%H%M%S")}"
       FileUtils.copy_entry TEMPLATE_PATH, @extract_path
     end
 
