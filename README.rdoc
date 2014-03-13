@@ -21,26 +21,30 @@ To use it in Rails, add this line to your Gemfile:
     
     @deck = Powerpoint::Presentation.new
 
-    # Passing title and subtilite to the introduction slide.
+    # Creating an introduction slide.
     title = 'Bicycle Of the Mind'
     subtitle = 'created by Steve Jobs'
     @deck.add_intro title, subtitle
     
-    # Passing the slide title and content items to a new slide.
+    # Creating a text-only slide.
+    # Title must be a string.
+    # Contents must be an array of strings that will be displayed as bullet items.
     title = 'Why Mac?'
     content = ['Its cool!', 'Its light.']
     @deck.add_textual_slide title, content
 
-    # Passing the slide title and image path to create a pictorial slide.
+    # Creating an image Slie.
+    # It will contain a title as string.
+    # and an embeded image
+    title = Everyone loves Macs:'
+    image_path = 'samples/images/sample_gif.gif'
+    @deck.add_pictorial_slide title, image_path
+    
+    # Specifying coordinates and image size for an embeded image.
     # x and y values define the position of the image on the slide.
     # cx and cy define the width and height of the image.
     # x, y, cx, cy are in points. Each pixel is 12700 points.
     # coordinates are optional.
-    
-    title = Everyone loves Macs:'
-    image_path = 'samples/images/sample_gif.gif'
-    @deck.add_pictorial_slide title, image_path
-    # or
     coords = {x: 124200, y: 3356451, cx: 2895600, cy: 1013460}
     @deck.add_pictorial_slide title, image_path, coords
     
@@ -49,7 +53,7 @@ To use it in Rails, add this line to your Gemfile:
   
 == Compatibility
 
-'powerpoint' gem has been tested using LibreOffice(4.2.1.1) and Apache OpenOffice(4.0.1) on Mac OS X Mavericks and Microsoft PowerPoint 2010 on Windows 7.
+'powerpoint' gem has been tested using LibreOffice(4.2.1.1) and Apache OpenOffice(4.0.1) on Mac OS X Mavericks and Microsoft PowerPoint 2010 on Windows 7 and Google Docs(latest version as of March 2014).
 
 == Contributing
 
