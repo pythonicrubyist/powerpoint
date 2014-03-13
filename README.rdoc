@@ -1,4 +1,4 @@
-= 'powerpoint' gem --  for creating Powerpoint Slides in Ruby.
+= 'powerpoint' gem --  for creating PowerPoint Slides in Ruby.
 
 'powerpoint' is a Ruby gem that can generate Powerpont files(pptx).
 
