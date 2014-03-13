@@ -80,12 +80,6 @@ module Powerpoint
                         <a:fillRect />
                     </a:stretch>
                 </p:blipFill>
-                <p:spPr>
-                    <a:xfrm>
-                        <a:off x="3124200" y="3356451" />
-                        <a:ext cx="2895600" cy="1013460" />
-                    </a:xfrm>
-                </p:spPr>
             </p:pic>
         </p:spTree>
         <p:extLst>
