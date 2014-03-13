@@ -37,7 +37,7 @@ To use it in Rails, add this line to your Gemfile:
     # Creating an image Slide:
     # It will contain a title as string.
     # and an embeded image
-    title = Everyone loves Macs:'
+    title = 'Everyone loves Macs:'
     image_path = 'samples/images/sample_gif.gif'
     @deck.add_pictorial_slide title, image_path
     
@@ -45,7 +45,7 @@ To use it in Rails, add this line to your Gemfile:
     # x and y values define the position of the image on the slide.
     # cx and cy define the width and height of the image.
     # x, y, cx, cy are in points. Each pixel is 12700 points.
-    # coordinates are optional.
+    # coordinates parameter is optional.
     coords = {x: 124200, y: 3356451, cx: 2895600, cy: 1013460}
     @deck.add_pictorial_slide title, image_path, coords
     
@@ -54,7 +54,7 @@ To use it in Rails, add this line to your Gemfile:
   
 == Compatibility
 
-'powerpoint' gem has been tested using LibreOffice(4.2.1.1) and Apache OpenOffice(4.0.1) on Mac OS X Mavericks and Microsoft PowerPoint 2010 on Windows 7 and Google Docs(latest version as of March 2014).
+'powerpoint' gem has been tested with LibreOffice(4.2.1.1) and Apache OpenOffice(4.0.1) on Mac OS X Mavericks, Microsoft PowerPoint 2010 on Windows 7 and Google Docs(latest version as of March 2014).
 
 == Contributing
 
