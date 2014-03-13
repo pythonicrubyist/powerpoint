@@ -1,3 +1,3 @@
 module Powerpoint
-  VERSION = "0.9.3"
+  VERSION = "1.1"
 end
