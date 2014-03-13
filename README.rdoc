@@ -54,7 +54,7 @@ To use it in Rails, add this line to your Gemfile:
   
 == Compatibility
 
-'powerpoint' gem has been tested using LibreOffice(4.2.1.1) and Apache OpenOffice(4.0.1) on Mac OS X Mavericks and Microsoft PowerPoint 2010 on Windows 7 and Google Docs(latest version as of March 2014).
+'powerpoint' gem has been tested using LibreOffice(4.2.1.1) and Apache OpenOffice(4.0.1) on Mac OS X Mavericks, Microsoft PowerPoint 2010 on Windows 7 and Google Docs(latest version as of March 2014).
 
 == Contributing
 
