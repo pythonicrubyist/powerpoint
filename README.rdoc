@@ -1,11 +1,11 @@
 = 'powerpoint' gem --  for creating PowerPoint Slides in Ruby.
 
-'powerpoint' is a Ruby gem that can generate Powerpont files(pptx).
+'powerpoint' is a Ruby gem that can generate PowerPoint files(pptx).
 
 
 == Installation
 
-RubyPowerpont can be used from the command line or as part of a Ruby web framework. To install the gem using terminal, run the following command:
+'powerpont' can be used from the command line or as part of a Ruby web framework. To install the gem using terminal, run the following command:
 
     gem install powerpoint
 
@@ -15,25 +15,26 @@ To use it in Rails, add this line to your Gemfile:
 
 
 == Basic Usage
-'powerpoint' gem can generate a powerpoint presentaion based on a standard template:
+
+'powerpoint' gem can generate a PowerPoint presentaion based on a standard template:
 
     require 'powerpoint'
     
     @deck = Powerpoint::Presentation.new
 
-    # Creating an introduction slide.
+    # Creating an introduction slide:
     title = 'Bicycle Of the Mind'
     subtitle = 'created by Steve Jobs'
     @deck.add_intro title, subtitle
     
-    # Creating a text-only slide.
+    # Creating a text-only slide:
     # Title must be a string.
-    # Contents must be an array of strings that will be displayed as bullet items.
+    # Content must be an array of strings that will be displayed as bullet items.
     title = 'Why Mac?'
     content = ['Its cool!', 'Its light.']
     @deck.add_textual_slide title, content
 
-    # Creating an image Slide.
+    # Creating an image Slide:
     # It will contain a title as string.
     # and an embeded image
     title = Everyone loves Macs:'

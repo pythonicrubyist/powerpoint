@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["pythonicrubyist"]
   spec.email         = ["pythonicrubyist@gmail.com"]
   spec.description   = %q{A Ruby gem that can create a PowerPoint presentation.}
-  spec.summary       = %q{powerpoint is a Ruby gem that can create a Powerpoint presentation based on a standard pptx template.}
+  spec.summary       = %q{powerpoint is a Ruby gem that can create a PowerPoint presentation based on a standard pptx template.}
   spec.homepage      = "https://github.com/pythonicrubyist/powerpoint"
   spec.license       = "MIT"
 
