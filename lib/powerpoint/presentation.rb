@@ -24,9 +24,9 @@ module Powerpoint
       setablish_relationships
     end
 
-    def add_pictorial_slide title, image_path
+    def add_pictorial_slide title, image_path, coords={}
       @slide_count += 1
-      Powerpoint::Slide::Pictorial.new @extract_path, title, image_path, @slide_count
+      Powerpoint::Slide::Pictorial.new @extract_path, title, image_path, @slide_count, coords
       setablish_relationships
     end    
     

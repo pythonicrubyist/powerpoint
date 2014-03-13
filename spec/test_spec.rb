@@ -8,7 +8,7 @@ describe 'Powerpoint parsing a sample PPTX file' do
     @deck.add_textual_slide 'Why Iphone?', ['Its fast!', 'Its cheap!']
     @deck.add_pictorial_slide 'JPG Logo', 'samples/images/sample_jpg.jpg'
     @deck.add_pictorial_slide 'PNG Logo', 'samples/images/sample_png.png'
-    @deck.add_pictorial_slide 'GIF Logo', 'samples/images/sample_gif.gif'
+    @deck.add_pictorial_slide 'GIF Logo', 'samples/images/sample_gif.gif', {x: 124200, y: 3356451, cx: 2895600, cy: 1013460}
     @deck.add_pictorial_slide 'SVG Logo', 'samples/images/sample_svg.svg'
     @deck.add_textual_slide 'Why Android?', ['Its great!', 'Its sweet!']
     @deck.save 'samples/pptx/sample.pptx' # Examine the PPTX file

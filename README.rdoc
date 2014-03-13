@@ -1,4 +1,4 @@
-= powerpoint --  for creating Powerpoint Slides.
+= 'powerpoint' gem --  for creating Powerpoint Slides in Ruby.
 
 'powerpoint' is a Ruby gem that can generate Powerpont files(pptx).
 
@@ -22,18 +22,34 @@ To use it in Rails, add this line to your Gemfile:
     @deck = Powerpoint::Presentation.new
 
     # Passing title and subtilite to the introduction slide.
-    @deck.add_intro 'Bicycle Of the Mind', 'created by Steve Jobs'
+    title = 'Bicycle Of the Mind'
+    subtitle = 'created by Steve Jobs'
+    @deck.add_intro title, subtitle
     
     # Passing the slide title and content items to a new slide.
-    @deck.add_textual_slide 'Why Mac?', ['Its cool!', 'Its light.']
+    title = 'Why Mac?'
+    content = ['Its cool!', 'Its light.']
+    @deck.add_textual_slide title, content
 
     # Passing the slide title and image path to create a pictorial slide.
-    @deck.add_pictorial_slide 'Everyone loves Macs:', 'image1.jpg'
+    # x and y values define the position of the image on the slide.
+    # cx and cy define the width and height of the image.
+    # x, y, cx, cy are in points. Each pixel is 12700 points.
+    # coordinates are optional.
+    
+    title = Everyone loves Macs:'
+    image_path = 'samples/images/sample_gif.gif'
+    @deck.add_pictorial_slide title, image_path
+    # or
+    coords = {x: 124200, y: 3356451, cx: 2895600, cy: 1013460}
+    @deck.add_pictorial_slide title, image_path, coords
     
     # Saving the pptx file to the file system.
-    @deck.save ('/home/developer/powerpoint/test.pptx')
+    @deck.save('/home/developer/powerpoint/test.pptx')
   
+== Compatibility
 
+'powerpoint' gem has been tested using LibreOffice(4.2.1.1) and Apache OpenOffice(4.0.1) on Mac OS X Mavericks and Microsoft PowerPoint 2010 on Windows 7.
 
 == Contributing
 
