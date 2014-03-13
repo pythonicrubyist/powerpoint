@@ -5,6 +5,9 @@ describe 'Powerpoint parsing a sample PPTX file' do
     # Powerpoint.decompress_pptx 'test2.pptx', 'test2'
     # Powerpoint.decompress_pptx 'test1.pptx', 'test1'
     # Powerpoint.compress_pptx 'extract', 'x13.pptx'
+    # Powerpoint.compress_pptx 'test1', 'test1.pptx'
+    # Powerpoint.compress_pptx 'test2', 'test2.pptx'
+    # Powerpoint.compress_pptx 'test3', 'test3.pptx'    
     @deck = Powerpoint::Presentation.new 
     @deck.add_intro 'Bicycle Of the Mind', 'created by Steve Jobs'
     @deck.add_textual_slide 'Why Mac?', ['Its cool!', 'Its light!']
