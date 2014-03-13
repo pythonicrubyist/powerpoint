@@ -33,7 +33,7 @@ To use it in Rails, add this line to your Gemfile:
     content = ['Its cool!', 'Its light.']
     @deck.add_textual_slide title, content
 
-    # Creating an image Slie.
+    # Creating an image Slide.
     # It will contain a title as string.
     # and an embeded image
     title = Everyone loves Macs:'
