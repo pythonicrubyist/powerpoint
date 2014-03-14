@@ -49,8 +49,7 @@ To use it in Rails, add this line to your Gemfile:
     coords = {x: 124200, y: 3356451, cx: 2895600, cy: 1013460}
     @deck.add_pictorial_slide title, image_path, coords
     
-    # Saving the pptx file to the file system
-    # , the directory where the script is run from).
+    # Saving the pptx file to the current directory.
     @deck.save('test.pptx')
   
 == Compatibility

@@ -13,7 +13,6 @@ module Powerpoint
   spec = Gem::Specification.find_by_name("powerpoint")
   gem_root = spec.gem_dir
   TEMPLATE_PATH = "#{gem_root}/template/"
-  EXTRACT_PATH = "#{gem_root}/extracts/"
 
   def self.decompress_pptx in_path, out_path
   	Zip::File.open(in_path) do |zip_file|

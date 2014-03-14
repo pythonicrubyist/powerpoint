@@ -1,5 +1,6 @@
 require 'zip/filesystem'
 require 'fileutils'
+require 'tmpdir'
 
 module Powerpoint
   class Powerpoint::Presentation
@@ -8,7 +9,7 @@ module Powerpoint
 
     def initialize
       @slide_count = 0
-      @extract_path =  "#{EXTRACT_PATH}/extract_#{Time.now.strftime("%Y-%m-%d-%H%M%S")}"
+      @extract_path =  File.join Dir.tmpdir, "extract_#{Time.now.strftime("%Y-%m-%d-%H%M%S")}"
       FileUtils.copy_entry TEMPLATE_PATH, @extract_path
     end
 
