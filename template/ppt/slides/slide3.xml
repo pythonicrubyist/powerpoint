@@ -64,11 +64,7 @@
                                 <a:tableStyleId>{5C22544A-7EE6-4342-B048-85BDC9FD1C3A}</a:tableStyleId>
                             </a:tblPr>
                             <a:tblGrid>
-                                <a:gridCol w="1645920" />
-                                <a:gridCol w="1645920" />
-                                <a:gridCol w="1645920" />
-                                <a:gridCol w="1645920" />
-                                <a:gridCol w="1645920" />
+                                COLS_PLACEHOLDER
                             </a:tblGrid>
                             ROWS_PLACEHOLDER
                         </a:tbl>
