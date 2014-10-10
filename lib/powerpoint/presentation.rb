@@ -13,6 +13,10 @@ module Powerpoint
       FileUtils.copy_entry TEMPLATE_PATH, @extract_path
     end
 
+    def foo
+      puts "foo"
+    end
+
     def add_intro title, subtitile=nil
       @slide_count += 1
       Powerpoint::Slide::Intro.new @extract_path, title, subtitile
@@ -23,6 +27,12 @@ module Powerpoint
       Powerpoint::Slide::Textual.new @extract_path, title, content, @slide_count
       Powerpoint::Slide::Relationship.new @extract_path, @slide_count
       setablish_relationships
+    end
+
+    def add_table_slide title, table
+      @slide_count += 1
+      Powerpoint::Slide::Table.new @extract_path, title, table, @slide_count
+      Powerpoint::Slide::Relaionship.new @extract_path, @slide_count
     end
 
     def add_pictorial_slide title, image_path, coords={}
