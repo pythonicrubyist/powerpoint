@@ -8,7 +8,7 @@ module Powerpoint
         template_path = "#{TEMPLATE_PATH}/ppt/slides/slide3.xml"
         xml = File.read template_path
 
-        xml.gsub!("SLIDE_TITLE_PLACEHOLDER", title)
+        xml.gsub!("TITLE_PLACEHOLDER", title)
 
         table_xml = table.map do |row|
           %{
