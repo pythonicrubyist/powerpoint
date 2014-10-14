@@ -22,7 +22,7 @@ module Powerpoint
       @slide_count += 1
       Powerpoint::Slide::Textual.new @extract_path, title, content, @slide_count
       Powerpoint::Slide::Relationship.new @extract_path, @slide_count
-      setablish_relationships
+      establish_relationships
     end
 
     def add_table_slide title, matrix, options={}
@@ -31,16 +31,16 @@ module Powerpoint
       
       Powerpoint::Slide::Table.new @extract_path, title, table, @slide_count
       Powerpoint::Slide::Relationship.new @extract_path, @slide_count
-      setablish_relationships
+      establish_relationships
     end
 
     def add_pictorial_slide title, image_path, coords={}
       @slide_count += 1
       Powerpoint::Slide::Pictorial.new @extract_path, title, image_path, @slide_count, coords
-      setablish_relationships
+      establish_relationships
     end    
     
-    def setablish_relationships
+    def establish_relationships
       if @slide_count > 2
         Powerpoint::ContentType.new @extract_path, @slide_count
         Powerpoint::Relationship.new @extract_path, @slide_count
