@@ -25,8 +25,10 @@ module Powerpoint
       setablish_relationships
     end
 
-    def add_table_slide title, table
+    def add_table_slide title, matrix, options={}
       @slide_count += 1
+      table = Powerpoint::Utils::Table.new matrix, options
+      
       Powerpoint::Slide::Table.new @extract_path, title, table, @slide_count
       Powerpoint::Slide::Relationship.new @extract_path, @slide_count
       setablish_relationships

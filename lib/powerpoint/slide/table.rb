@@ -11,6 +11,7 @@ module Powerpoint
         #set the title
         xml.gsub!("TITLE_PLACEHOLDER", title)
 
+        #set the table
         xml.gsub! "TABLE_PLACEHOLDER", table.to_xml
 
         #write the result to the powerpoint
