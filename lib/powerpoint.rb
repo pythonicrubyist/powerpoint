@@ -8,6 +8,7 @@ require 'powerpoint/slide/relationship'
 require 'powerpoint/content_type'
 require 'powerpoint/meta'
 require 'powerpoint/presentation'
+require 'powerpoint/utils/table'
 
 module Powerpoint
 

@@ -7,7 +7,7 @@ module Powerpoint
         raise ArgumentError.new("no cols") if matrix.first.first.nil?
         
         @matrix   = matrix
-        @ncols    = matrix
+        @ncols    = matrix.first.length
         @width    = (settings[:width]    or "1645920")
         @style    = (settings[:style]    or "5C22544A-7EE6-4342-B048-85BDC9FD1C3A")
         @firstrow = (settings[:firstrow] or "1")
@@ -43,7 +43,7 @@ module Powerpoint
 					}
 				</a:tblGrid>
 				#{
-					table.map do |row|
+					@matrix.map do |row|
 						%{
 							<a:tr h="370840">
 								#{
