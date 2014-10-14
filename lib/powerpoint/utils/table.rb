@@ -35,7 +35,7 @@ module Powerpoint
 		%{
 			<a:tbl>
 				<a:tblPr firstRow="#{@firstrow}" bandRow="">
-					<a:tableStyleId>#{@heading}</a:tableStyleId>
+					<a:tableStyleId>{#{@style}}</a:tableStyleId>
 				</a:tblPr>
 				<a:tblGrid>
 					#{
