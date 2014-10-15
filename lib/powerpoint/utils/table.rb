@@ -22,7 +22,7 @@ module Powerpoint
         @height   = (settings[:height]   or "370840")
 
         #table style by microsoft id
-        @style    = name_to_guid(settings[:style] or :medium_style_2_accent_1)
+        @style    = name_to_guid (settings[:style] or :medium_style_2_accent_1)
 
         #boolean...first row is a header
         #TODO: actually covert this to a ruby bool
