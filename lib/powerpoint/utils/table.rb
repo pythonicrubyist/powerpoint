@@ -24,8 +24,6 @@ module Powerpoint
         #table style by microsoft id
         input = (settings[:style] or :medium_style_2_accent_1)
         @style    = name_to_guid(input)
-        puts input
-        puts @style
 
         #boolean...first row is a header
         #TODO: actually covert this to a ruby bool
