@@ -3,8 +3,10 @@ module Powerpoint
   module Utils
     class Table
       def initialize matrix, settings = {}
-        raise ArgumentError.new("no rows") if matrix.first.nil?
-        raise ArgumentError.new("no cols") if matrix.first.first.nil?
+        #assertions
+        raise ArgumentError.new("no matrix") unless matrix            #not null
+        raise ArgumentError.new("no rows") if matrix.first.nil?       #has rows
+        raise ArgumentError.new("no cols") if matrix.first.first.nil? #has cols
 
         #actual rows and cols
         @matrix   = matrix
@@ -22,8 +24,7 @@ module Powerpoint
         @height   = (settings[:height]   or "370840")
 
         #table style by microsoft id
-        input = (settings[:style] or :medium_style_2_accent_1)
-        @style    = name_to_guid(input)
+        @style    = name_to_guid((settings[:style] or :medium_style_2_accent_1))
 
         #boolean...first row is a header
         #TODO: actually covert this to a ruby bool
@@ -52,6 +53,7 @@ module Powerpoint
         @bandrow = bandrow
       end
 
+      #renders the xml representing the table...gets used in the Slide::Table class to render xml
       def to_xml
 		%{
 			<a:tbl>

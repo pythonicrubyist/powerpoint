@@ -9,7 +9,7 @@ module Powerpoint
         xml = File.read template_path
 
         #set the title
-        xml.gsub!("TITLE_PLACEHOLDER", title)
+        xml.gsub! "TITLE_PLACEHOLDER", title
 
         #set the table
         xml.gsub! "TABLE_PLACEHOLDER", table.to_xml
