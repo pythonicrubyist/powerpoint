@@ -2,6 +2,7 @@ require "powerpoint/version"
 require 'powerpoint/slide/intro'
 require 'powerpoint/slide/textual'
 require 'powerpoint/slide/pictorial'
+require 'powerpoint/slide/textpic'
 require 'powerpoint/relationship'
 require 'powerpoint/slide/relationship'
 require 'powerpoint/content_type'
