@@ -65,7 +65,6 @@ To use it in Rails, add this line to your Gemfile:
     @deck.add_textpic_slide title, image_path, image_coords, content_string, content_coords
     @deck.add_textpic_slide title, image_path, image_coords, content_array, content_coords
     @deck.add_textpic_slide title, image_path, image_coords, content_hash, content_coords
-    @deck.add_pictorial_slide title, image_path
     
     # Saving the pptx file to the current directory.
     @deck.save('test.pptx')
