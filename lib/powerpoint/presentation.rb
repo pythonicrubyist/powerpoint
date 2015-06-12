@@ -29,6 +29,12 @@ module Powerpoint
       @slide_count += 1
       Powerpoint::Slide::Pictorial.new @extract_path, title, image_path, @slide_count, coords
       setablish_relationships
+    end
+
+    def add_textpic_slide title, image_path, image_coords={}, content=[], content_coords={}
+      @slide_count += 1
+      Powerpoint::Slide::Textpic.new @extract_path, title, image_path, @slide_count, image_coords, content, content_coords
+      setablish_relationships
     end    
     
     def setablish_relationships
