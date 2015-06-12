@@ -34,9 +34,9 @@ To use it in Rails, add this line to your Gemfile:
     content = ['Its cool!', 'Its light.']
     @deck.add_textual_slide title, content
 
-    # Creating an image Slide:
+    # Creating an image-only slide:
     # It will contain a title as string.
-    # and an embeded image
+    # and an embedded image
     title = 'Everyone loves Macs:'
     image_path = 'samples/images/sample_gif.gif'
     @deck.add_pictorial_slide title, image_path
@@ -48,6 +48,24 @@ To use it in Rails, add this line to your Gemfile:
     # coordinates parameter is optional.
     coords = {x: 124200, y: 3356451, cx: 2895600, cy: 1013460}
     @deck.add_pictorial_slide title, image_path, coords
+
+    # Creating an image with text slide:
+    # It will contain a title as string and
+    # an embedded image with additional content as text.
+    # The text can be introduced as a String, Array or Hash, and has
+    # differents formats at the slide.
+    # Both can also specify coordinates.
+    title = 'Picture with content'
+    image_path = 'samples/images/sample_png.png'
+    image_coords = {x: 124200, y: 2356451, cx: 4000000, cy: 4000000}
+    content_string = "Description of the picture!"
+    content_array = ["First sentence", "Second sentence"]
+    content_hash = {name: "Steve", company: "Apple", location: "USA"}
+    content_coords = {x: 4490000, y: 2556451, cx: 4500000, cy: 3000000}
+    @deck.add_textpic_slide title, image_path, image_coords, content_string, content_coords
+    @deck.add_textpic_slide title, image_path, image_coords, content_array, content_coords
+    @deck.add_textpic_slide title, image_path, image_coords, content_hash, content_coords
+    @deck.add_pictorial_slide title, image_path
     
     # Saving the pptx file to the current directory.
     @deck.save('test.pptx')
