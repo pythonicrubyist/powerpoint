@@ -51,10 +51,6 @@ module Powerpoint
         File.open("#{extract_path}/ppt/slides/slide#{index}.xml", 'w'){ |f| f << render_view('pictorial_slide.xml.erb') }
       end
 
-      def extract_path
-        @presentation.extract_path
-      end
-
     end
   end
 end
