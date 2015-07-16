@@ -1,0 +1,9 @@
+---
+engines:
+  rubocop:
+    enabled: true
+ratings:
+  paths:
+    - powerpoint/**
+exclude_paths:
+  - spec/**/*
