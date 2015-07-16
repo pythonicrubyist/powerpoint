@@ -35,6 +35,11 @@ module Powerpoint
       @extract_path = File.join(Dir.tmpdir, "extract_#{Time.now.strftime("%Y-%m-%d-%H%M%S")}")
       FileUtils.copy_entry TEMPLATE_PATH, @extract_path
 
+      # Remove keep files
+      FileUtils.rm_rf("#{@extract_path}/ppt/_rels/.keep")
+      FileUtils.rm_rf("#{@extract_path}/ppt/media/.keep")
+      FileUtils.rm_rf("#{@extract_path}/ppt/slides/_rels/.keep")
+
       # Render/save generic stuff
       File.open("#{extract_path}/[Content_Types].xml", 'w') { |f| f << render_view('content_type.xml.erb') }
       File.open("#{extract_path}/ppt/_rels/presentation.xml.rels", 'w') { |f| f << render_view('presentation.xml.rel.erb') }
