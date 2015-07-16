@@ -1,18 +1,15 @@
 require "powerpoint/version"
+require 'powerpoint/util'
 require 'powerpoint/slide/intro'
 require 'powerpoint/slide/textual'
 require 'powerpoint/slide/pictorial'
-require 'powerpoint/relationship'
-require 'powerpoint/slide/relationship'
-require 'powerpoint/content_type'
-require 'powerpoint/meta'
 require 'powerpoint/presentation'
 
 module Powerpoint
 
   spec = Gem::Specification.find_by_name("powerpoint")
-  gem_root = spec.gem_dir
-  TEMPLATE_PATH = "#{gem_root}/template/"
+  ROOT_PATH = spec.gem_dir
+  TEMPLATE_PATH = "#{ROOT_PATH}/template/"
 
   def self.decompress_pptx in_path, out_path
   	Zip::File.open(in_path) do |zip_file|
