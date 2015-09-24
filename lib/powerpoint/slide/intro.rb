@@ -1,21 +1,31 @@
-require 'zip/filesystem'
 require 'fileutils'
+require 'erb'
 
 module Powerpoint
   module Slide
-    class Powerpoint::Slide::Intro
-      def initialize extract_path, title, subtitile=nil
-        template_path = "#{TEMPLATE_PATH}/ppt/slides/slide1.xml"
-        xml = File.read template_path
+    class Intro
+      include Powerpoint::Util
+      
+      attr_reader :title, :subtitile
 
-        xml_title = '<a:p><a:r><a:rPr lang="en-US" dirty="0" smtClean="0"/><a:t>' + title.to_s + '</a:t></a:r><a:endParaRPr lang="en-US" dirty="0"/></a:p>'
-        xml.gsub!('PRESENTATION_TITLE_PACEHOLDER', xml_title)
+      def initialize(options={})
+        require_arguments [:title, :subtitile], options
+        options.each {|k, v| instance_variable_set("@#{k}", v)}
+      end
 
-        xml_subtitle = '<a:p><a:r><a:rPr lang="en-US" dirty="0" smtClean="0"/><a:t>' + subtitile.to_s+ '</a:t></a:r><a:endParaRPr lang="en-US" dirty="0"/></a:p>'
-        xml.gsub!('PRESENTATION_SUBTITLE_PACEHOLDER', xml_subtitle)
+      def save(index)
+        save_rel_xml(index)
+        save_slide_xml(index)
+      end
 
-        intro_slide_path = "#{extract_path}/ppt/slides/slide1.xml"
-        File.open(intro_slide_path, 'w'){ |f| f << xml }
+      private
+
+      def save_rel_xml index
+        File.open("#{extract_path}/ppt/slides/_rels/slide#{index}.xml.rels", 'w'){ |f| f << render_view('textual_rel.xml.erb') }
+      end
+
+      def save_slide_xml index
+        File.open("#{extract_path}/ppt/slides/slide#{index}.xml", 'w'){ |f| f << render_view('intro_slide.xml.erb') }
       end
     end
   end
