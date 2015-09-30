@@ -5,22 +5,20 @@ module Powerpoint
       px * 12700
     end
 
-    def render_view(filename)
-      view_contents = read_template(filename)
+    def render_view(template_name, path)
+      view_contents = read_template(template_name)
       renderer = ERB.new(view_contents)
-      renderer.result( binding )
+      data = renderer.result(binding)
+
+      File.open(path, 'w') { |f| f << data }
     end
 
     def read_template(filename)
-      File.read(Powerpoint::ROOT_PATH + "/lib/powerpoint/views/#{filename}")
+      File.read("#{Powerpoint::VIEW_PATH}/#{filename}")
     end
 
     def require_arguments(required_argements, argements)
       raise ArgumentError unless required_argements.all? {|required_key| argements.keys.include? required_key}
-    end
-
-    def extract_path
-      @presentation.extract_path
     end
   end
 end
