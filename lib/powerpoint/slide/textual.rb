@@ -13,20 +13,20 @@ module Powerpoint
         options.each {|k, v| instance_variable_set("@#{k}", v)}
       end
 
-      def save(index)
-        save_rel_xml(index)
-        save_slide_xml(index)
+      def save(extract_path, index)
+        save_rel_xml(extract_path, index)
+        save_slide_xml(extract_path, index)
       end
 
-      private
-
-      def save_rel_xml index
-        File.open("#{extract_path}/ppt/slides/_rels/slide#{index}.xml.rels", 'w'){ |f| f << render_view('textual_rel.xml.erb') }
+      def save_rel_xml(extract_path, index)
+        render_view('textual_rel.xml.erb', "#{extract_path}/ppt/slides/_rels/slide#{index}.xml.rels")
       end
+      private :save_rel_xml
 
-      def save_slide_xml index
-        File.open("#{extract_path}/ppt/slides/slide#{index}.xml", 'w'){ |f| f << render_view('textual_slide.xml.erb') }
+      def save_slide_xml(extract_path, index)
+        render_view('textual_slide.xml.erb', "#{extract_path}/ppt/slides/slide#{index}.xml")
       end
+      private :save_slide_xml
     end
   end
 end

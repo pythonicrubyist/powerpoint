@@ -17,20 +17,20 @@ module Powerpoint
       	@image_name = File.basename(@image_path)
       end
 
-      def save(index)
-        copy_media_to_extract_path
-        save_rel_xml(index)
-        save_slide_xml(index)
+      def save(extract_path, index)
+        copy_media(extract_path)
+        save_rel_xml(extract_path, index)
+        save_slide_xml(extract_path, index)
       end
 
       def file_type
         File.extname(image_name).gsub('.', '')
       end
 
-    	private
-
       def default_coords
-        slide_width = pixle_to_pt(720); slide_height = pixle_to_pt(540); default_width = pixle_to_pt(550)
+        slide_width = pixle_to_pt(720)
+        default_width = pixle_to_pt(550)
+
         return {} unless dimensions = FastImage.size(image_path)
         image_width, image_height = dimensions.map {|d| pixle_to_pt(d)}
         new_width = default_width < image_width ? default_width : image_width
@@ -38,19 +38,22 @@ module Powerpoint
         new_height = (image_height.to_f * ratio).round
         {x: (slide_width / 2) - (new_width/2), y: pixle_to_pt(120), cx: new_width, cy: new_height}
       end
+      private :default_coords
 
-      def copy_media_to_extract_path
+      def copy_media(extract_path)
         FileUtils.copy_file(@image_path, "#{extract_path}/ppt/media/#{@image_name}")
       end
+      private :copy_media
 
-      def save_rel_xml index
-        File.open("#{extract_path}/ppt/slides/_rels/slide#{index}.xml.rels", 'w'){ |f| f << render_view('pictorial_rel.xml.erb') }
+      def save_rel_xml(extract_path, index)
+        render_view('pictorial_rel.xml.erb', "#{extract_path}/ppt/slides/_rels/slide#{index}.xml.rels")
       end
+      private :save_rel_xml
 
-      def save_slide_xml index
-        File.open("#{extract_path}/ppt/slides/slide#{index}.xml", 'w'){ |f| f << render_view('pictorial_slide.xml.erb') }
+      def save_slide_xml(extract_path, index)
+        render_view('pictorial_slide.xml.erb', "#{extract_path}/ppt/slides/slide#{index}.xml")
       end
-
+      private :save_slide_xml
     end
   end
 end
