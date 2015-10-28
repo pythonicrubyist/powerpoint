@@ -30,6 +30,14 @@ module Powerpoint
       @slides << Powerpoint::Slide::Pictorial.new(presentation: self, title: title, image_path: image_path, coords: coords)
     end
 
+    def add_text_picture_slide(title, image_path, content = [])
+      @slides << Powerpoint::Slide::TextPicSplit.new(presentation: self, title: title, image_path: image_path, content: content)
+    end
+
+    def add_picture_description_slide(title, image_path, content = [])
+      @slides << Powerpoint::Slide::DescriptionPic.new(presentation: self, title: title, image_path: image_path, content: content)
+    end
+
     def save(path)
       Dir.mktmpdir do |dir|
         extract_path = "#{dir}/extract_#{Time.now.strftime("%Y-%m-%d-%H%M%S")}"
