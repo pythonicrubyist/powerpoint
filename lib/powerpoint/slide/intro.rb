@@ -18,6 +18,10 @@ module Powerpoint
         save_slide_xml(extract_path, index)
       end
 
+      def file_type
+        nil
+      end
+
       def save_rel_xml(extract_path, index)
         render_view('textual_rel.xml.erb', "#{extract_path}/ppt/slides/_rels/slide#{index}.xml.rels")
       end

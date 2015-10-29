@@ -18,7 +18,7 @@ module Powerpoint
       end
 
       def save(extract_path, index)
-        copy_media(extract_path)
+        copy_media(extract_path, @image_path)
         save_rel_xml(extract_path, index)
         save_slide_xml(extract_path, index)
       end
@@ -39,11 +39,6 @@ module Powerpoint
         {x: (slide_width / 2) - (new_width/2), y: pixle_to_pt(120), cx: new_width, cy: new_height}
       end
       private :default_coords
-
-      def copy_media(extract_path)
-        FileUtils.copy_file(@image_path, "#{extract_path}/ppt/media/#{@image_name}")
-      end
-      private :copy_media
 
       def save_rel_xml(extract_path, index)
         render_view('pictorial_rel.xml.erb', "#{extract_path}/ppt/slides/_rels/slide#{index}.xml.rels")

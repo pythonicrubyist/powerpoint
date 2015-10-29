@@ -54,6 +54,7 @@ module Powerpoint
         render_view('content_type.xml.erb', "#{extract_path}/[Content_Types].xml")
         render_view('presentation.xml.rel.erb', "#{extract_path}/ppt/_rels/presentation.xml.rels")
         render_view('presentation.xml.erb', "#{extract_path}/ppt/presentation.xml")
+        render_view('app.xml.erb', "#{extract_path}/docProps/app.xml")
 
         # Save slides
         slides.each_with_index do |slide, index|
@@ -69,7 +70,7 @@ module Powerpoint
     end
 
     def file_types
-      slides.select {|slide| slide.class == Powerpoint::Slide::Pictorial}.map(&:file_type).uniq
+      slides.map {|slide| slide.file_type if slide.respond_to? :file_type }.compact.uniq
     end
   end
 end
