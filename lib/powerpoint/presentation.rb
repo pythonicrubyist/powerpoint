@@ -30,6 +30,14 @@ module Powerpoint
       @slides << Powerpoint::Slide::Pictorial.new(presentation: self, title: title, image_path: image_path, coords: coords)
     end
 
+    def add_text_picture_slide(title, image_path, content = [])
+      @slides << Powerpoint::Slide::TextPicSplit.new(presentation: self, title: title, image_path: image_path, content: content)
+    end
+
+    def add_picture_description_slide(title, image_path, content = [])
+      @slides << Powerpoint::Slide::DescriptionPic.new(presentation: self, title: title, image_path: image_path, content: content)
+    end
+
     def save(path)
       Dir.mktmpdir do |dir|
         extract_path = "#{dir}/extract_#{Time.now.strftime("%Y-%m-%d-%H%M%S")}"
@@ -46,6 +54,7 @@ module Powerpoint
         render_view('content_type.xml.erb', "#{extract_path}/[Content_Types].xml")
         render_view('presentation.xml.rel.erb', "#{extract_path}/ppt/_rels/presentation.xml.rels")
         render_view('presentation.xml.erb', "#{extract_path}/ppt/presentation.xml")
+        render_view('app.xml.erb', "#{extract_path}/docProps/app.xml")
 
         # Save slides
         slides.each_with_index do |slide, index|
@@ -61,7 +70,7 @@ module Powerpoint
     end
 
     def file_types
-      slides.select {|slide| slide.class == Powerpoint::Slide::Pictorial}.map(&:file_type).uniq
+      slides.map {|slide| slide.file_type if slide.respond_to? :file_type }.compact.uniq
     end
   end
 end

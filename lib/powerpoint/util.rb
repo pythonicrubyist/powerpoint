@@ -20,5 +20,11 @@ module Powerpoint
     def require_arguments(required_argements, argements)
       raise ArgumentError unless required_argements.all? {|required_key| argements.keys.include? required_key}
     end
+
+    def copy_media(extract_path, image_path)
+      image_name = File.basename(image_path)
+      dest_path = "#{extract_path}/ppt/media/#{image_name}"
+      FileUtils.copy_file(image_path, dest_path) unless File.exist?(dest_path)
+    end
   end
 end
