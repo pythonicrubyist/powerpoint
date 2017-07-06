@@ -13,10 +13,11 @@ describe 'Powerpoint parsing a sample PPTX file' do
     @deck.add_picture_description_slide('JPG Logo', 'samples/images/sample_jpg.jpg', content = ['descriptions'])
     @deck.add_pictorial_slide 'GIF Logo', 'samples/images/sample_gif.gif', {x: 124200, y: 3356451, cx: 2895600, cy: 1013460}
     @deck.add_textual_slide 'Why Android?', ['Its great!', 'Its sweet!']
+    @deck.add_table_slide 'Why tables?', [['Row1Cell1', 'Row1Cell1'], ['Row2Cell1', 'Row2Cell2']]
     @deck.save 'samples/pptx/sample.pptx' # Examine the PPTX file
   end
 
   it 'Create a PPTX file successfully.' do
-    #@deck.should_not be_nil
+    @deck.should_not be_nil
   end
 end

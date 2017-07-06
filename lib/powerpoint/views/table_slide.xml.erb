@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
+  <p:cSld>
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="1" name=""/>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2" name="Title 1"/>
+          <p:cNvSpPr>
+            <a:spLocks noGrp="1"/>
+          </p:cNvSpPr>
+          <p:nvPr>
+            <p:ph type="title"/>
+          </p:nvPr>
+        </p:nvSpPr>
+        <p:spPr/>
+        <p:txBody>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p>
+            <a:r>
+              <a:rPr dirty="0" lang="en-US" smtClean="0"/>
+              <a:t><%= title %></a:t>
+            </a:r>
+            <a:endParaRPr dirty="0" lang="en-US"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:graphicFrame>
+        <p:nvGraphicFramePr>
+          <p:cNvPr id="87" name="Table 2"/>
+          <p:cNvGraphicFramePr/>
+          <p:nvPr/>
+        </p:nvGraphicFramePr>
+        <p:xfrm>
+          <a:off x="2066760" y="2365560"/>
+          <a:ext cx="5075280" cy="2159280"/>
+        </p:xfrm>
+        <a:graphic>
+          <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/table">
+            <a:tbl>
+              <a:tblPr/>
+              <a:tblGrid>
+                <a:gridCol w="1268640"/>
+                <a:gridCol w="1268640"/>
+                <a:gridCol w="1268640"/>
+                <a:gridCol w="1269720"/>
+              </a:tblGrid>
+              <% content.each do |row| %>
+              <a:tr h="719640">
+                <% row.each do |cell| %>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr lIns="90000" rIns="90000" tIns="46800" bIns="46800"/>
+                    <a:p>
+                      <a:r>
+                        <a:rPr b="0" lang="pt-PT" sz="1800" spc="-1" strike="noStrike">
+                          <a:solidFill>
+                            <a:srgbClr val="000000"/>
+                          </a:solidFill>
+                          <a:uFill>
+                            <a:solidFill>
+                              <a:srgbClr val="ffffff"/>
+                            </a:solidFill>
+                          </a:uFill>
+                          <a:latin typeface="Arial"/>
+                        </a:rPr>
+                        <a:t><%= cell %></a:t>
+                      </a:r>
+                      <a:endParaRPr b="0" lang="pt-PT" sz="1800" spc="-1" strike="noStrike">
+                        <a:solidFill>
+                          <a:srgbClr val="000000"/>
+                        </a:solidFill>
+                        <a:uFill>
+                          <a:solidFill>
+                            <a:srgbClr val="ffffff"/>
+                          </a:solidFill>
+                        </a:uFill>
+                        <a:latin typeface="Arial"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr marL="90000" marR="90000">
+                    <a:lnL w="720">
+                      <a:solidFill>
+                        <a:srgbClr val="ffffff"/>
+                      </a:solidFill>
+                    </a:lnL>
+                    <a:lnR w="720">
+                      <a:solidFill>
+                        <a:srgbClr val="ffffff"/>
+                      </a:solidFill>
+                    </a:lnR>
+                    <a:lnT w="720">
+                      <a:solidFill>
+                        <a:srgbClr val="ffffff"/>
+                      </a:solidFill>
+                    </a:lnT>
+                    <a:lnB w="720">
+                      <a:solidFill>
+                        <a:srgbClr val="ffffff"/>
+                      </a:solidFill>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="b3b3b3"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <% end %>
+              </a:tr>
+              <% end %>
+            </a:tbl>
+          </a:graphicData>
+        </a:graphic>
+      </p:graphicFrame>
+    </p:spTree>
+    <p:extLst>
+      <p:ext uri="{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}">
+        <p14:creationId val="1231192379" xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main"/>
+      </p:ext>
+    </p:extLst>
+  </p:cSld>
+  <p:clrMapOvr>
+    <a:masterClrMapping/>
+  </p:clrMapOvr>
+</p:sld>
