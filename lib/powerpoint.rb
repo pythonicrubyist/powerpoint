@@ -5,6 +5,7 @@ require 'powerpoint/slide/textual'
 require 'powerpoint/slide/pictorial'
 require 'powerpoint/slide/text_picture_split'
 require 'powerpoint/slide/picture_description'
+require 'powerpoint/slide/table'
 require 'powerpoint/compression'
 require 'powerpoint/presentation'
 
