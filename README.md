@@ -1,3 +1,6 @@
+[![version](https://badge.fury.io/rb/creek.svg)](https://badge.fury.io/rb/powerpointk)
+[![downloads](https://ruby-gem-downloads-badge.herokuapp.com/powerpoint?type=total&total_label=downloads)](https://ruby-gem-downloads-badge.herokuapp.com/creek?type=total&total_label=downloads)
+
 # 'powerpoint' gem -- for creating PowerPoint Slides in Ruby.
 
 'powerpoint' is a Ruby gem that can generate PowerPoint files(pptx).
