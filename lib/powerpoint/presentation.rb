@@ -38,6 +38,16 @@ module Powerpoint
       @slides << Powerpoint::Slide::DescriptionPic.new(presentation: self, title: title, image_path: image_path, content: content)
     end
 
+    def add_hub_intro(title, subtitile = nil)
+      existing_intro_slide = @slides.select {|s| s.class == Powerpoint::Slide::HubIntro}[0]
+      slide = Powerpoint::Slide::HubIntro.new(presentation: self, title: title, subtitile: subtitile)
+      if existing_intro_slide
+        @slides[@slides.index(existing_intro_slide)] = slide 
+      else
+        @slides.insert 0, slide
+      end
+    end
+
     def save(path)
       Dir.mktmpdir do |dir|
         extract_path = "#{dir}/extract_#{Time.now.strftime("%Y-%m-%d-%H%M%S")}"
