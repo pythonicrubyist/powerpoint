@@ -69,6 +69,42 @@
           </a:p>
         </p:txBody>
       </p:sp>
+      <p:pic>
+        <p:nvPicPr>
+          <p:cNvPr id="4" name="Content Placeholder 3"/>
+          <p:cNvPicPr>
+            <a:picLocks noChangeAspect="1" noGrp="1"/>
+          </p:cNvPicPr>
+          <p:nvPr>
+            <p:ph idx="1"/>
+          </p:nvPr>
+        </p:nvPicPr>
+        <p:blipFill>
+          <a:blip r:embed="rId2">
+            <a:extLst>
+              <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                <a14:useLocalDpi val="0" xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main"/>
+              </a:ext>
+            </a:extLst>
+          </a:blip>
+          <a:stretch>
+            <a:fillRect/>
+          </a:stretch>
+        </p:blipFill>
+        <% if coords.any? %>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="<%= coords[:x].to_s %>" y="<%= coords[:y].to_s %>"/>
+            <a:ext cx="<%= coords[:cx].to_s %>" cy="<%= coords[:cy].to_s %>"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+        <% else %>
+        <p:spPr/>
+        <% end %>
+      </p:pic>
     </p:spTree>
     <p:extLst>
       <p:ext uri="{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}">

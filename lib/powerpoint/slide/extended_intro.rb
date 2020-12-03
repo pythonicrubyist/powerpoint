@@ -1,4 +1,6 @@
+require 'zip/filesystem'
 require 'fileutils'
+require 'fastimage'
 require 'erb'
 
 module Powerpoint
@@ -6,7 +8,7 @@ module Powerpoint
     class ExtendedIntro
       include Powerpoint::Util
 
-      attr_reader :title, :subtitile, :coords, :image_path, :image_name
+      attr_reader :title, :subtitile, :image_name, :coords, :image_path
 
       def initialize(options={})
         require_arguments [:title, :subtitile, :image_path], options
