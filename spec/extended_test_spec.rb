@@ -3,7 +3,7 @@ require 'powerpoint'
 describe 'Powerpoint parsing a sample PPTX file' do
   before(:all) do 
     @deck = Powerpoint::Presentation.new
-    @deck.add_extended_intro 'Bicycle Of the Mind', 'created by Steve Jobs'
+    @deck.add_extended_intro 'Bicycle Of the Mind','samples/images/sample_png.png', 'created by Steve Jobs'
     @deck.save 'samples/pptx/sample.pptx' # Examine the PPTX file
   end
 
