@@ -3,7 +3,7 @@ require 'erb'
 
 module Powerpoint
   module Slide
-    class HubIntro
+    class ExtendedIntro
       include Powerpoint::Util
 
       attr_reader :title, :subtitile
@@ -28,7 +28,7 @@ module Powerpoint
       private :save_rel_xml
 
       def save_slide_xml(extract_path, index)
-        render_view('hub_intro_slide.xml.erb', "#{extract_path}/ppt/slides/slide#{index}.xml")
+        render_view('extended_intro_slide.xml.erb', "#{extract_path}/ppt/slides/slide#{index}.xml")
       end
       private :save_slide_xml
     end
