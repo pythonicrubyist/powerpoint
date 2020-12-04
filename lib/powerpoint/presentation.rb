@@ -38,9 +38,9 @@ module Powerpoint
       @slides << Powerpoint::Slide::DescriptionPic.new(presentation: self, title: title, image_path: image_path, content: content)
     end
 
-    def add_extended_intro(title, image_path, subtitile = nil, coords = {})
+    def add_extended_intro(title, image_path, subtitle = nil,subtitle_2 = nil, coords = {})
       existing_intro_slide = @slides.select {|s| s.class == Powerpoint::Slide::ExtendedIntro}[0]
-      slide = Powerpoint::Slide::ExtendedIntro.new(presentation: self, title: title, subtitile: subtitile, image_path: image_path, coords: coords)
+      slide = Powerpoint::Slide::ExtendedIntro.new(presentation: self, title: title, subtitle: subtitle, image_path: image_path,subtitle_2: subtitle_2, coords: coords)
       if existing_intro_slide
         @slides[@slides.index(existing_intro_slide)] = slide 
       else

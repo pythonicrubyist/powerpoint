@@ -8,10 +8,10 @@ module Powerpoint
     class ExtendedIntro
       include Powerpoint::Util
 
-      attr_reader :title, :subtitile, :image_name, :coords, :image_path
+      attr_reader :title, :subtitle, :subtitle_2, :image_name, :coords, :image_path
 
       def initialize(options={})
-        require_arguments [:title, :subtitile, :image_path], options
+        require_arguments [:title, :subtitle, :image_path, :subtitle_2], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
         @coords = default_coords unless @coords.any?
         @image_name = File.basename(@image_path)
