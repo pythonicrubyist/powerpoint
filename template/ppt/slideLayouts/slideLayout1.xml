@@ -35,6 +35,11 @@
           <a:bodyPr/>
           <a:lstStyle/>
           <a:p>
+            <a:pPr algn="l">
+              <a:spcAft>
+                <a:spcPts val="1200"/>
+              </a:spcAft>
+            </a:pPr>
             <a:r>
               <a:rPr lang="en-US" smtClean="0"/>
               <a:t>Click to edit Master title style</a:t>
