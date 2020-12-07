@@ -32,7 +32,7 @@
           </a:xfrm>
         </p:spPr>
         <p:txBody>
-          <a:bodyPr/>
+          <a:bodyPr vert="horz" lIns="91440" tIns="45720" rIns="91440" bIns="45720" rtlCol="0" />
           <a:lstStyle/>
           <a:p>
             <a:pPr algn="l">
@@ -65,7 +65,7 @@
           </a:xfrm>
         </p:spPr>
         <p:txBody>
-          <a:bodyPr/>
+          <a:bodyPr vert="horz" lIns="91440" tIns="45720" rIns="91440" bIns="45720" rtlCol="0" />
           <a:lstStyle>
             <a:lvl1pPr algn="ctr" indent="0" marL="0">
               <a:buNone/>
