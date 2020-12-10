@@ -22,6 +22,16 @@ module Powerpoint
       end
     end
 
+    def add_extended_intro(title, image_path, subtitle = nil,subtitle_2 = nil, coords = {})
+      existing_intro_slide = @slides.select {|s| s.class == Powerpoint::Slide::ExtendedIntro}[0]
+      slide = Powerpoint::Slide::ExtendedIntro.new(presentation: self, title: title, subtitle: subtitle, image_path: image_path,subtitle_2: subtitle_2, coords: coords)
+      if existing_intro_slide
+        @slides[@slides.index(existing_intro_slide)] = slide 
+      else
+        @slides.insert 0, slide
+      end
+    end
+
     def add_textual_slide(title, content = [])
       @slides << Powerpoint::Slide::Textual.new(presentation: self, title: title, content: content)
     end
@@ -38,14 +48,8 @@ module Powerpoint
       @slides << Powerpoint::Slide::DescriptionPic.new(presentation: self, title: title, image_path: image_path, content: content)
     end
 
-    def add_extended_intro(title, image_path, subtitle = nil,subtitle_2 = nil, coords = {})
-      existing_intro_slide = @slides.select {|s| s.class == Powerpoint::Slide::ExtendedIntro}[0]
-      slide = Powerpoint::Slide::ExtendedIntro.new(presentation: self, title: title, subtitle: subtitle, image_path: image_path,subtitle_2: subtitle_2, coords: coords)
-      if existing_intro_slide
-        @slides[@slides.index(existing_intro_slide)] = slide 
-      else
-        @slides.insert 0, slide
-      end
+    def add_ranking_slide(title,images)
+      @slides << Powerpoint::Slide::Textual.new(presentation: self, title: title, content: content)
     end
 
     def save(path)
