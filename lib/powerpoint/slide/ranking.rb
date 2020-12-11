@@ -8,13 +8,13 @@ module Powerpoint
     class Ranking
       include Powerpoint::Util
 
-      attr_reader :title, :subtitle, :subtitle_2, :image_name, :coords, :image_path
+      attr_reader :title, :subtitle, :images
 
       def initialize(options={})
-        require_arguments [:title, :subtitle, :image_path, :subtitle_2], options
+        require_arguments [:title, :subtitle, :images], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
         @coords = default_coords unless @coords.any?
-        @image_name = File.basename(@image_path)
+        images
       end
 
       def save(extract_path, index)

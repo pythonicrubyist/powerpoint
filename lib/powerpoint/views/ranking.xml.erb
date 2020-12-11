@@ -15,6 +15,7 @@
           <a:chExt cx="0" cy="0"/>
         </a:xfrm>
       </p:grpSpPr>
+      <% images.each_with_index do |image, index| %>
       <p:sp>
         <p:nvSpPr>
           <p:cNvPr id="2" name="Title 1"/>
@@ -32,7 +33,7 @@
           <a:p>
             <a:r>
               <a:rPr dirty="0" lang="en-US" smtClean="0"/>
-              <a:t><%= title %></a:t>
+              <a:t><%=  image['title'] %></a:t>
             </a:r>
             <a:endParaRPr dirty="0" lang="en-US"/>
           </a:p>
@@ -74,6 +75,7 @@
         <p:spPr/>
         <% end %>
       </p:pic>
+    <% end %>
     </p:spTree>
     <p:extLst>
       <p:ext uri="{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}">
