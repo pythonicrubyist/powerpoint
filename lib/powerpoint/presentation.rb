@@ -49,7 +49,7 @@ module Powerpoint
     end
 
     def add_ranking_slide(title,images)
-      @slides << Powerpoint::Slide::Textual.new(presentation: self, title: title, content: content)
+      @slides << Powerpoint::Slide::Textual.new(presentation: self, title: title, images: images)
     end
 
     def save(path)
