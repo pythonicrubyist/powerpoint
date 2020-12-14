@@ -19,8 +19,10 @@ module Powerpoint
     end
 
     def require_arguments(required_arguements, arguements)
+      puts '---------------------->'
       puts required_arguements.inspect
       puts arguements.inspect
+       puts '---------------------->'
       raise ArgumentError unless required_arguements.all? {|required_key| arguements.keys.include? required_key}
     end
 
