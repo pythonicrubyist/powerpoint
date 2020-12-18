@@ -57,7 +57,7 @@ module Powerpoint
     end
 
     def add_gallery_slide(title, subtitle = nil,images)
-      @slides << Powerpoint::Slide::4d.new(presentation: self, title: title, subtitle: subtitle)
+      @slides << Powerpoint::Slide::Gallery.new(presentation: self, title: title, subtitle: subtitle)
     end
 
     def add_concept_slide(title, subtitle = nil,images)
