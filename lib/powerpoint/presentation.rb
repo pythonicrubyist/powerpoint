@@ -52,6 +52,22 @@ module Powerpoint
       @slides << Powerpoint::Slide::Textual.new(presentation: self, title: title, subtitle: subtitle, images: images)
     end
 
+    def add_image_slide(title, subtitle = nil,images)
+      @slides << Powerpoint::Slide::Textual.new(presentation: self, title: title, subtitle: subtitle)
+    end
+
+    def add_4d_slide(title, subtitle = nil,images)
+      @slides << Powerpoint::Slide::Textual.new(presentation: self, title: title, subtitle: subtitle)
+    end
+
+    def add_concept_slide(title, subtitle = nil,images)
+      @slides << Powerpoint::Slide::Textual.new(presentation: self, title: title, subtitle: subtitle)
+    end
+
+    def add_collage_slide(title, subtitle = nil,images)
+      @slides << Powerpoint::Slide::Textual.new(presentation: self, title: title, subtitle: subtitle)
+    end
+
     def save(path)
       Dir.mktmpdir do |dir|
         extract_path = "#{dir}/extract_#{Time.now.strftime("%Y-%m-%d-%H%M%S")}"
