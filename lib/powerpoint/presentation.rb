@@ -49,23 +49,23 @@ module Powerpoint
     end
 
     def add_ranking_slide(title, subtitle = nil,images)
-      @slides << Powerpoint::Slide::Textual.new(presentation: self, title: title, subtitle: subtitle, images: images)
+      @slides << Powerpoint::Slide::Ranking.new(presentation: self, title: title, subtitle: subtitle, images: images)
     end
 
     def add_image_slide(title, subtitle = nil,images)
-      @slides << Powerpoint::Slide::Textual.new(presentation: self, title: title, subtitle: subtitle)
+      @slides << Powerpoint::Slide::Image.new(presentation: self, title: title, subtitle: subtitle)
     end
 
     def add_4d_slide(title, subtitle = nil,images)
-      @slides << Powerpoint::Slide::Textual.new(presentation: self, title: title, subtitle: subtitle)
+      @slides << Powerpoint::Slide::4d.new(presentation: self, title: title, subtitle: subtitle)
     end
 
     def add_concept_slide(title, subtitle = nil,images)
-      @slides << Powerpoint::Slide::Textual.new(presentation: self, title: title, subtitle: subtitle)
+      @slides << Powerpoint::Slide::Concept.new(presentation: self, title: title, subtitle: subtitle)
     end
 
     def add_collage_slide(title, subtitle = nil,images)
-      @slides << Powerpoint::Slide::Textual.new(presentation: self, title: title, subtitle: subtitle)
+      @slides << Powerpoint::Slide::Collage.new(presentation: self, title: title, subtitle: subtitle)
     end
 
     def save(path)
