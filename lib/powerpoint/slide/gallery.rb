@@ -5,7 +5,7 @@ require 'erb'
 
 module Powerpoint
   module Slide
-    class 4d
+    class Gallery
       include Powerpoint::Util
 
       attr_reader :title, :subtitle, :images
