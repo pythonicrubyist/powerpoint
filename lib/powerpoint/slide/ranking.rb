@@ -13,12 +13,14 @@ module Powerpoint
       def initialize(options={})
         require_arguments [:title, :subtitle, :images], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
-        puts images.inspect
+        @images = images
       end
 
       def save(extract_path, index)
+        @images.each do |image|
+          copy_media(extract_path, image[0])
+        end
 
-        copy_media(extract_path, @image_path)
         save_rel_xml(extract_path, index)
         save_slide_xml(extract_path, index)
       end
