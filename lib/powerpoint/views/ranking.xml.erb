@@ -17,6 +17,15 @@
       </p:grpSpPr>
       <% images.each_with_index do |image, index| %>
       <p:pic>
+        <p:nvPicPr>
+          <p:cNvPr id="4" name="Content Placeholder 3"/>
+          <p:cNvPicPr>
+            <a:picLocks noChangeAspect="1" noGrp="1"/>
+          </p:cNvPicPr>
+          <p:nvPr>
+            <p:ph idx="<%= index + 1 %>"/>
+          </p:nvPr>
+        </p:nvPicPr>
         <p:blipFill>
           <a:blip r:embed="rId<%= index + 2  %>">
           </a:blip>
