@@ -15,10 +15,47 @@
           <a:chExt cx="0" cy="0"/>
         </a:xfrm>
       </p:grpSpPr>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2" name="Title 1"/>
+          <p:cNvSpPr>
+            <a:spLocks noGrp="1"/>
+          </p:cNvSpPr>
+          <p:nvPr>
+            <p:ph type="title"/>
+          </p:nvPr>
+        </p:nvSpPr>
+        <p:spPr/>
+        <p:txBody>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p>
+            <a:r>
+              <a:rPr dirty="0" lang="en-US" smtClean="0"/>
+              <a:t><%= title %></a:t>
+            </a:r>
+            <a:endParaRPr dirty="0" lang="en-US"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
       <% images.each_with_index do |image, index| %>
       <p:pic>
+        <p:nvPicPr>
+          <p:cNvPr id="4" name="Content Placeholder 3"/>
+          <p:cNvPicPr>
+            <a:picLocks noChangeAspect="1" noGrp="1"/>
+          </p:cNvPicPr>
+          <p:nvPr>
+            <p:ph idx="1"/>
+          </p:nvPr>
+        </p:nvPicPr>
         <p:blipFill>
           <a:blip r:embed="rId<%= index + 2  %>">
+            <a:extLst>
+              <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                <a14:useLocalDpi val="0" xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main"/>
+              </a:ext>
+            </a:extLst>
           </a:blip>
           <a:stretch>
             <a:fillRect/>
@@ -26,7 +63,7 @@
         </p:blipFill>
         <p:spPr/>
       </p:pic>
-    <% end %>
+      <% end %>
     </p:spTree>
     <p:extLst>
       <p:ext uri="{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}">
