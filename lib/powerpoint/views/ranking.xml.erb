@@ -61,7 +61,15 @@
             <a:fillRect/>
           </a:stretch>
         </p:blipFill>
-        <p:spPr/>
+         <p:spPr>
+          <a:xfrm>
+            <a:off x="<%= (index *10000).to_s %>" y="<%= (index *10000).to_s %>"/>
+            <a:ext cx="<%= (index *10000).to_s  %>" cy="<%= (index *10000).to_s %>"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
       </p:pic>
       <% end %>
     </p:spTree>
