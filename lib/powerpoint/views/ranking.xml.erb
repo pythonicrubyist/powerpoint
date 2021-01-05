@@ -38,8 +38,8 @@
           </a:p>
         </p:txBody>
       </p:sp>
-      <% y_coords = 2364490 %>
-      <% x_coords = 1549630 %>
+      <% y_coords = 2664490 %>
+      <% x_coords = 2049630 %>
       <% images.each_with_index do |image, index| %>
       <p:pic>
         <p:nvPicPr>
@@ -74,29 +74,16 @@
         </p:spPr>
       </p:pic>
       <p:txBody>
-        <a:bodyPr anchor="t" rtlCol="0"/>
-        <a:lstStyle/>
-        <a:p>
-          <a:r>
-              <a:rPr lang="en-US" sz="1400" dirty="0" b="1">
-                <a:solidFill>
-                  <a:schemeClr val="tx1"/>
-                </a:solidFill>
-              </a:rPr>
-                <a:t>Position: X</a:t>
-          </a:r>
-        </a:p>
-        <a:p>
-          <a:r>
-            <a:rPr lang="en-US" sz="1400" dirty="0" b="1">
-              <a:solidFill>
-                <a:schemeClr val="tx1"/>
-              </a:solidFill>
-            </a:rPr>
-            <a:t>Votes: X </a:t>
-          </a:r>
-        </a:p>
-      </p:txBody>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p>
+            <a:r>
+              <a:rPr dirty="0" lang="en-US" smtClean="0"/>
+              <a:t>Votes</a:t>
+            </a:r>
+            <a:endParaRPr dirty="0" lang="en-US"/>
+          </a:p>
+        </p:txBody>
       <% end %>
     </p:spTree>
     <p:extLst>
