@@ -38,8 +38,8 @@
           </a:p>
         </p:txBody>
       </p:sp>
-      <% y_coords = 2064490 %>
-      <% x_coords = 2549630 %>
+      <% y_coords = 2364490 %>
+      <% x_coords = 1549630 %>
       <% images.each_with_index do |image, index| %>
       <p:pic>
         <p:nvPicPr>
@@ -65,7 +65,7 @@
         </p:blipFill>
         <p:spPr>
           <a:xfrm>
-            <a:off y="<%= 1503883 + (y_coords * (index/5).floor) %>" x="<%= 460588 + (x_coords*(index.to_i % 5)) %>"/>
+            <a:off y="<%= 1503883 + (y_coords * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 5)) %>"/>
             <a:ext cy="1903883" cx="2160588"/>
           </a:xfrm>
           <a:prstGeom prst="rect">
