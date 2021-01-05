@@ -39,7 +39,7 @@
         </p:txBody>
       </p:sp>
       <% y_coords = 2664490 %>
-      <% x_coords = 2049630 %>
+      <% x_coords = 2549630 %>
       <% images.each_with_index do |image, index| %>
       <p:pic>
         <p:nvPicPr>
@@ -73,17 +73,19 @@
           </a:prstGeom>
         </p:spPr>
       </p:pic>
-      <p:txBody>
-          <a:bodyPr/>
-          <a:lstStyle/>
-          <a:p>
-            <a:r>
-              <a:rPr dirty="0" lang="en-US" smtClean="0"/>
-              <a:t>Votes</a:t>
-            </a:r>
-            <a:endParaRPr dirty="0" lang="en-US"/>
-          </a:p>
-        </p:txBody>
+      <p:sp>
+        <p:txBody>
+            <a:bodyPr/>
+            <a:lstStyle/>
+            <a:p>
+              <a:r>
+                <a:rPr dirty="0" lang="en-US" smtClean="0"/>
+                <a:t>"Votes"</a:t>
+              </a:r>
+              <a:endParaRPr dirty="0" lang="en-US"/>
+            </a:p>
+          </p:txBody>
+        </p:sp>
       <% end %>
     </p:spTree>
     <p:extLst>
