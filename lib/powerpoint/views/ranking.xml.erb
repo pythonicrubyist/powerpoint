@@ -87,7 +87,7 @@
           </p:txBody>
           <p:spPr>
             <a:xfrm>
-              <a:off y="<%= 3003883 + ((y_coords + 160000) * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 5)) %>"/>
+              <a:off y="<%= 3003883 + (y_coords * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 5)) %>"/>
               <a:ext cy="1903883" cx="2160588"/>
             </a:xfrm>
             <a:prstGeom prst="rect">
@@ -109,7 +109,7 @@
           </p:txBody>
           <p:spPr>
             <a:xfrm>
-              <a:off y="<%= 4003883 + ((y_coords + 1600000) * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 5)) %>"/>
+              <a:off y="<%= 4003883 + (y_coords  * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 5)) %>"/>
               <a:ext cy="1903883" cx="2160588"/>
             </a:xfrm>
             <a:prstGeom prst="rect">
