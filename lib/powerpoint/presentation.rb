@@ -57,6 +57,7 @@ module Powerpoint
     end
 
     def add_gallery_slide(title, subtitle = nil,images)
+      puts 'add gallery'
       @slides << Powerpoint::Slide::Gallery.new(presentation: self, title: title, subtitle: subtitle)
     end
 
