@@ -3,7 +3,7 @@
   <p:cSld>
     <p:spTree>
       <p:nvGrpSpPr>
-        <p:cNvPr id="1" name="title"/>
+        <p:cNvPr id="1" name=""/>
         <p:cNvGrpSpPr/>
         <p:nvPr/>
       </p:nvGrpSpPr>
@@ -25,16 +25,20 @@
             <p:ph type="title"/>
           </p:nvPr>
         </p:nvSpPr>
-        <p:spPr/>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="838200" y="0"/>
+            <a:ext cx="10515600" cy="1325563"/>
+          </a:xfrm>
+        </p:spPr>
         <p:txBody>
           <a:bodyPr/>
           <a:lstStyle/>
           <a:p>
             <a:r>
-              <a:rPr dirty="0" lang="en-US" smtClean="0"/>
+              <a:rPr lang="en-US" b="1" dirty="0"/>
               <a:t><%= title %></a:t>
             </a:r>
-            <a:endParaRPr dirty="0" lang="en-US"/>
           </a:p>
         </p:txBody>
       </p:sp>
@@ -43,22 +47,20 @@
       <% images.each_with_index do |image, index| %>
       <p:pic>
         <p:nvPicPr>
-          <p:cNvPr id="<%= index + 3 %>" name="Content Placeholder <%= index + 2 %>"/>
-          <p:cNvPicPr>
-            <a:picLocks noChangeAspect="1" noGrp="1"/>
-          </p:cNvPicPr>
-          <p:nvPr>
-            <p:ph idx="1"/>
-          </p:nvPr>
-        </p:nvPicPr>
-        <p:blipFill>
-          <a:blip r:embed="rId<%= index + 2  %>">
+          <p:cNvPr id="<%= index + 3 %>" name="Content Placeholder <%= index + 2 %>">
             <a:extLst>
-              <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <a14:useLocalDpi val="0" xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main"/>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{A9A20F6E-12DB-C244-80E1-C21BB706AF8B}"/>
               </a:ext>
             </a:extLst>
-          </a:blip>
+          </p:cNvPr>
+          <p:cNvPicPr>
+            <a:picLocks noChangeAspect="1"/>
+          </p:cNvPicPr>
+          <p:nvPr/>
+        </p:nvPicPr>
+        <p:blipFill>
+          <a:blip r:embed="rId<%= index + 2  %>" />
           <a:stretch>
             <a:fillRect/>
           </a:stretch>
@@ -74,8 +76,18 @@
         </p:spPr>
       </p:pic>
       <p:sp>
+          <p:spPr>
+            <a:xfrm>
+              <a:off y="<%= 3403883 + (y_coords * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 5)) %>"/>
+              <a:ext cy="1903883" cx="2160588"/>
+            </a:xfrm>
+            <a:prstGeom prst="rect">
+            </a:prstGeom>
+          </p:spPr>
           <p:txBody>
-            <a:bodyPr/>
+            <a:bodyPr wrap="square" rtlCol="0">
+              <a:spAutoFit/>
+            </a:bodyPr>
             <a:lstStyle/>
             <a:p>
               <a:r>
@@ -84,38 +96,13 @@
               </a:r>
               <a:endParaRPr dirty="0" lang="en-US"/>
             </a:p>
-          </p:txBody>
-          <p:spPr>
-            <a:xfrm>
-              <a:off y="<%= 3403883 + (y_coords * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 5)) %>"/>
-              <a:ext cy="1903883" cx="2160588"/>
-            </a:xfrm>
-            <a:prstGeom prst="rect">
-              <a:avLst/>
-            </a:prstGeom>
-          </p:spPr>
-        </p:sp>
-        <p:sp>
-          <p:txBody>
-            <a:bodyPr/>
-            <a:lstStyle/>
             <a:p>
               <a:r>
                 <a:rPr dirty="0" lang="en-US" smtClean="0"/>
                 <a:t>Votes: <%= image[1] %></a:t>
               </a:r>
-              <a:endParaRPr dirty="0" lang="en-US"/>
             </a:p>
-          </p:txBody>
-          <p:spPr>
-            <a:xfrm>
-              <a:off y="<%= 3603883 + (y_coords  * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 5)) %>"/>
-              <a:ext cy="1903883" cx="2160588"/>
-            </a:xfrm>
-            <a:prstGeom prst="rect">
-              <a:avLst/>
-            </a:prstGeom>
-          </p:spPr>
+        </p:txBody>
         </p:sp>
       <% end %>
     </p:spTree>
