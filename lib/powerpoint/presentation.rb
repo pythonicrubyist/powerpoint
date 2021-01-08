@@ -48,8 +48,8 @@ module Powerpoint
       @slides << Powerpoint::Slide::DescriptionPic.new(presentation: self, title: title, image_path: image_path, content: content)
     end
 
-    def add_ranking_slide(title, subtitle = nil,images)
-      @slides << Powerpoint::Slide::Ranking.new(presentation: self, title: title, subtitle: subtitle, images: images)
+    def add_ranking_slide(title, subtitle = nil, subtitle_2 = nil, logo ,images)
+      @slides << Powerpoint::Slide::Ranking.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, logo: logo, images: images)
     end
 
     def add_image_slide(title, subtitle = nil,images)
@@ -57,7 +57,6 @@ module Powerpoint
     end
 
     def add_gallery_slide(title, subtitle = nil,images)
-      puts 'add gallery'
       @slides << Powerpoint::Slide::Gallery.new(presentation: self, title: title, subtitle: subtitle)
     end
 

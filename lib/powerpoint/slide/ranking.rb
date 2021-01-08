@@ -8,10 +8,10 @@ module Powerpoint
     class Ranking
       include Powerpoint::Util
 
-      attr_reader :title, :subtitle,:logo,:company, :images
+      attr_reader :title, :subtitle,:subtitle_2, :logo, :images
 
       def initialize(options={})
-        require_arguments [:title, :subtitle, :logo, :company, :images], options
+        require_arguments [:title, :subtitle,:subtitle_2,:logo, :images], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
         @images = images
       end
