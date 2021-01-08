@@ -42,12 +42,39 @@
           </a:p>
         </p:txBody>
       </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="3" name="Title 1"/>
+          <p:cNvSpPr>
+            <a:spLocks noGrp="1"/>
+          </p:cNvSpPr>
+          <p:nvPr>
+            <p:ph type="title"/>
+          </p:nvPr>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="8200" y="0"/>
+            <a:ext cx="10515600" cy="1325563"/>
+          </a:xfrm>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p>
+            <a:r>
+              <a:rPr lang="en-US"  dirty="0"/>
+              <a:t><%= subtitle %></a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
       <% y_coords = 2664490 %>
       <% x_coords = 2349630 %>
       <% images.each_with_index do |image, index| %>
       <p:pic>
         <p:nvPicPr>
-          <p:cNvPr id="<%= index + 3 %>" name="Content Placeholder <%= index + 2 %>">
+          <p:cNvPr id="<%= index + 4 %>" name="Content Placeholder <%= index + 2 %>">
             <a:extLst>
               <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
                 <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{A9A20F6E-12DB-C244-80E1-C21BB706AF8B}"/>
@@ -67,8 +94,8 @@
         </p:blipFill>
         <p:spPr>
           <a:xfrm>
-            <a:off y="<%= 1503883 + (y_coords * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 5)) %>"/>
-            <a:ext cy="1903883" cx="2160588"/>
+            <a:off y="<%= 1503883 + (y_coords * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 5)) %>" />
+            <a:ext cy="1903883" cx="2160588" />
           </a:xfrm>
           <a:prstGeom prst="rect">
             <a:avLst/>

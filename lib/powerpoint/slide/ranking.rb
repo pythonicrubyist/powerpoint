@@ -8,10 +8,10 @@ module Powerpoint
     class Ranking
       include Powerpoint::Util
 
-      attr_reader :title, :subtitle, :images
+      attr_reader :title, :subtitle,:logo,:company, :images
 
       def initialize(options={})
-        require_arguments [:title, :subtitle, :images], options
+        require_arguments [:title, :subtitle, :logo, :company, :images], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
         @images = images
       end
@@ -20,6 +20,8 @@ module Powerpoint
         @images.each do |image|
           copy_media(extract_path, image[0])
         end
+
+        copy_media(extract_path, logo)
 
         save_rel_xml(extract_path, index)
         save_slide_xml(extract_path, index)
