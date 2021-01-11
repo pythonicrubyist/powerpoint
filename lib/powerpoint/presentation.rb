@@ -48,7 +48,7 @@ module Powerpoint
       @slides << Powerpoint::Slide::DescriptionPic.new(presentation: self, title: title, image_path: image_path, content: content)
     end
 
-    def add_ranking_slide(title, subtitle = nil, subtitle_2 = nil, logo ,images)
+    def add_multiple_image_slide(title, subtitle = nil, subtitle_2 = nil, logo ,images)
       @slides << Powerpoint::Slide::MultipleImage.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, logo: logo, images: images)
     end
 
