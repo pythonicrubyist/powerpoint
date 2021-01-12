@@ -26,7 +26,7 @@ module Powerpoint
       end
 
       def file_type
-        File.extname(image_name).gsub('.', '')
+        File.extname(@image_name).gsub('.', '')
       end
 
       def default_coords
