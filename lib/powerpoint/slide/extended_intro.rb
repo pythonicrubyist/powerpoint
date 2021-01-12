@@ -11,7 +11,7 @@ module Powerpoint
       attr_reader :title, :subtitle, :subtitle_2, :image_name, :coords, :image_path, :image_path_2
 
       def initialize(options={})
-        require_arguments [:title, :subtitle, :image_path,:image_path_2, :subtitle_2], options
+        require_arguments [:title, :subtitle, :image_path, :image_path_2, :subtitle_2], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
         @coords = default_coords unless @coords.any?
         @image_name = File.basename(@image_path)
