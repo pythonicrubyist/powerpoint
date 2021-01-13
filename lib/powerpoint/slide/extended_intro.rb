@@ -13,7 +13,6 @@ module Powerpoint
       def initialize(options={})
         require_arguments [:title, :subtitle, :image_path, :image_path_2, :subtitle_2], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
-        @coords = default_coords unless @coords.any?
         @image_name = File.basename(@image_path)
         @image_name_2 = File.basename(@image_path_2)
       end
