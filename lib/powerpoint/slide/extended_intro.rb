@@ -8,7 +8,7 @@ module Powerpoint
     class ExtendedIntro
       include Powerpoint::Util
 
-      attr_reader :title, :subtitle, :subtitle_2, :coords, :image_path, :image_path_2
+      attr_reader :title, :subtitle, :subtitle_2, :coords, :image_path, :image_path_2, :image_name
 
       def initialize(options={})
         require_arguments [:title, :subtitle, :image_path, :image_path_2, :subtitle_2], options
