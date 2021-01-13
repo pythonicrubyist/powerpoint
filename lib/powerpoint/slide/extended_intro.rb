@@ -25,9 +25,6 @@ module Powerpoint
         save_slide_xml(extract_path, index)
       end
 
-      def file_type
-        File.extname(@image_name).gsub('.', '')
-      end
 
       def default_coords
         slide_width = pixle_to_pt(720)
