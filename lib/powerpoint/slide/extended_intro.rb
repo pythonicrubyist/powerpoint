@@ -16,6 +16,7 @@ module Powerpoint
         @coords = default_coords unless @coords.any?
         @image_name = File.basename(@image_path)
         @image_name_2 = File.basename(@image_path_2)
+        puts @image_name_2
       end
 
       def save(extract_path, index)
