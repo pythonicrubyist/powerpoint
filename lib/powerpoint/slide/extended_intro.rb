@@ -8,7 +8,7 @@ module Powerpoint
     class ExtendedIntro
       include Powerpoint::Util
 
-      attr_reader :title, :subtitle, :subtitle_2,:coords, :image_path, :image_path_2
+      attr_reader :title, :subtitle, :subtitle_2, :coords, :image_path, :image_path_2
 
       def initialize(options={})
         require_arguments [:title, :subtitle, :image_path, :image_path_2, :subtitle_2], options
@@ -25,6 +25,9 @@ module Powerpoint
         save_slide_xml(extract_path, index)
       end
 
+      def file_type
+        File.extname(image_name).gsub('.', '')
+      end
 
       def default_coords
         slide_width = pixle_to_pt(720)
