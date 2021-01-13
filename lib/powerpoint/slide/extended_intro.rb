@@ -25,25 +25,8 @@ module Powerpoint
         save_slide_xml(extract_path, index)
       end
 
-      def file_type
-        File.extname(image_name).gsub('.', '')
-      end
-
-      def default_coords
-        slide_width = pixle_to_pt(720)
-        default_width = pixle_to_pt(550)
-
-        return {} unless dimensions = FastImage.size(image_path)
-        image_width, image_height = dimensions.map {|d| pixle_to_pt(d)}
-        new_width = default_width < image_width ? default_width : image_width
-        ratio = new_width / image_width.to_f
-        new_height = (image_height.to_f * ratio).round
-        {x: (slide_width / 2) - (new_width/2), y: pixle_to_pt(120), cx: new_width, cy: new_height}
-      end
-      private :default_coords
-
       def save_rel_xml(extract_path, index)
-        render_view('extended_intro_slide.xml.erb', "#{extract_path}/ppt/slides/_rels/slide#{index}.xml.rels", index: index)
+        render_view('extended_intro_slide_rel.xml.erb', "#{extract_path}/ppt/slides/_rels/slide#{index}.xml.rels", index: index)
       end
       private :save_rel_xml
 
