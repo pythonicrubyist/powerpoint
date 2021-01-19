@@ -11,7 +11,7 @@ module Powerpoint
       b = merge_variables(binding, variables)
       data = renderer.result(b)
 
-      File.open(path, 'w') { |f| f << data }
+      File.open(path, 'w') { |f| f << data.squish! }
     end
 
     def read_template(filename)
