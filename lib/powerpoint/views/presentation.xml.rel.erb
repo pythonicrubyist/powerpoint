@@ -6,7 +6,6 @@
   <Relationship Id="rId4" Target="theme/theme2.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme"/>
   <Relationship Id="rId5" Target="tableStyles.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles"/>
   <% slides.each_with_index do |slide, index| %>
-    <% id = 5 + (index+1) %>
-    <Relationship Id="rId<%= id %>" Target="slides/slide<%= index+1 %>.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide"/>
+    <Relationship Id="rId<%= 5 + (index+1) %>" Target="slides/slide<%= index+1 %>.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide"/>
   <% end %>
 </Relationships>
