@@ -57,7 +57,7 @@ module Powerpoint
     end
 
     def add_dashboard_slide(title, subtitle = nil, subtitle_2 = nil, image_1, image_2, data)
-      @slides << Powerpoint::Slide::MultipleImage.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2,image_path: image_1, image_path_2: image_2, data: data)
+      @slides << Powerpoint::Slide::Dashboard.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, image_path: image_1, image_path_2: image_2, data: data)
     end
 
     def save(path)
