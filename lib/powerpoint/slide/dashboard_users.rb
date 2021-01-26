@@ -5,7 +5,7 @@ require 'erb'
 
 module Powerpoint
   module Slide
-    class Dashboard_2
+    class DashboardUsers
       include Powerpoint::Util
 
       attr_reader :title, :subtitle,:subtitle_2, :logo, :images
