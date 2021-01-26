@@ -56,6 +56,10 @@ module Powerpoint
       @slides << Powerpoint::Slide::Image.new(presentation: self, title: title, subtitle: subtitle)
     end
 
+    def add_dashboard_slide(title, subtitle = nil, subtitle_2 = nil, image_1, image_2, data)
+      @slides << Powerpoint::Slide::MultipleImage.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2,image_1: image_1, image_2: image_2, data: data)
+    end
+
     def save(path)
       Dir.mktmpdir do |dir|
         extract_path = "#{dir}/extract_#{Time.now.strftime("%Y-%m-%d-%H%M%S")}"
@@ -88,7 +92,7 @@ module Powerpoint
     end
 
     def file_types
-      slides.map {|slide| slide.file_type if slide.respond_to? :file_type }.compact.uniq
+      
     end
   end
 end
