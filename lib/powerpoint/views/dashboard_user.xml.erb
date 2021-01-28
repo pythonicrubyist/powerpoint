@@ -99,35 +99,6 @@
           </a:p>
         </p:txBody>
       </p:sp>
-      <p:pic>
-        <p:nvPicPr>
-          <p:cNvPr id="6" name="Content Placeholder 3"/>
-          <p:cNvPicPr>
-            <a:picLocks noChangeAspect="1" noGrp="1"/>
-          </p:cNvPicPr>
-          <p:nvPr>
-            <p:ph idx="1"/>
-          </p:nvPr>
-        </p:nvPicPr>
-        <p:blipFill>
-          <a:blip r:embed="rId2">
-            <a:extLst>
-              <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
-                <a14:useLocalDpi val="0" xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main"/>
-              </a:ext>
-            </a:extLst>
-          </a:blip>
-          <a:stretch>
-            <a:fillRect/>
-          </a:stretch>
-        </p:blipFill>
-        <p:spPr>
-          <a:xfrm>
-            <a:off x="258200" y="458200"/>
-            <a:ext cx="625563" cy="625563"/>
-          </a:xfrm>
-        </p:spPr>
-      </p:pic>
       <% y_coords = 2664490 %>
       <% x_coords = 2349630 %>
       <% images.each_with_index do |image, index| %>
@@ -189,14 +160,7 @@
           <a:p>
             <a:r>
               <a:rPr dirty="0" lang="en-US" smtClean="0"/>
-              <a:t>Position: <%= index +1 %></a:t>
-            </a:r>
-            <a:endParaRPr dirty="0" lang="en-US"/>
-          </a:p>
-          <a:p>
-            <a:r>
-              <a:rPr dirty="0" lang="en-US" smtClean="0"/>
-              <a:t>Votes: <%= image[1] %></a:t>
+              <a:t>Votes: <%= image[0] %></a:t>
             </a:r>
           </a:p>
         </p:txBody>
