@@ -2,6 +2,6 @@
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
   <Relationship Id="rId1" Target="../slideLayouts/slideLayout<%= index %>.xml" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout"/>
   <% images.each_with_index do |image, index| %>
-  <Relationship Id="rId<%= 3 + index %>" Target="../media/<%=  URI.parse(image[0].gsub(" ","")).path.split("/").last %>" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
+  <Relationship Id="rId<%= 3 + index %>" Target="../media/<%=  URI.parse(image[1].gsub(" ","")).path.split("/").last %>" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"/>
   <% end %>
 </Relationships>
