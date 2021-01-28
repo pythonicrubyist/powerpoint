@@ -60,6 +60,10 @@ module Powerpoint
       @slides << Powerpoint::Slide::Dashboard.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, image_path: image_1, image_path_2: image_2, image_path_3: image_3, image_path_4: image_4, data: data)
     end
 
+    def add_dashboard_users_slide(title, subtitle = nil, subtitle_2 = nil, images)
+      @slides << Powerpoint::Slide::DashboardUsers.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, images: data)
+    end
+
     def save(path)
       Dir.mktmpdir do |dir|
         extract_path = "#{dir}/extract_#{Time.now.strftime("%Y-%m-%d-%H%M%S")}"
