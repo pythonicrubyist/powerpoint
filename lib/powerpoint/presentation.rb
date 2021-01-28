@@ -61,7 +61,7 @@ module Powerpoint
     end
 
     def add_dashboard_users_slide(title, subtitle = nil, subtitle_2 = nil, images)
-      @slides << Powerpoint::Slide::DashboardUsers.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, images: data)
+      @slides << Powerpoint::Slide::DashboardUsers.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, images: images)
     end
 
     def save(path)
