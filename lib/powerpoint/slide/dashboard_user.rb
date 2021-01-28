@@ -18,7 +18,7 @@ module Powerpoint
 
       def save(extract_path, index)
         @images.each do |image|
-          copy_media(extract_path, image[0])
+          copy_media(extract_path, image[1])
         end
 
         save_rel_xml(extract_path, index)
