@@ -21,8 +21,6 @@ module Powerpoint
           copy_media(extract_path, image[0])
         end
 
-        copy_media(extract_path, logo)
-
         save_rel_xml(extract_path, index)
         save_slide_xml(extract_path, index)
       end
