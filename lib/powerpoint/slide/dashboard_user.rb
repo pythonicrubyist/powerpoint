@@ -5,7 +5,7 @@ require 'erb'
 
 module Powerpoint
   module Slide
-    class DashboardUsers
+    class DashboardUser
       include Powerpoint::Util
 
       attr_reader :title, :subtitle,:subtitle_2, :images
@@ -26,7 +26,7 @@ module Powerpoint
       end
 
       def save_rel_xml(extract_path, index)
-        render_view('dashboard_users_rel.xml.erb', "#{extract_path}/ppt/slides/_rels/slide#{index}.xml.rels", index: index)
+        render_view('dashboard_user_rel.xml.erb', "#{extract_path}/ppt/slides/_rels/slide#{index}.xml.rels", index: index)
       end
       private :save_rel_xml
 
