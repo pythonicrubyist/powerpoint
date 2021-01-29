@@ -100,7 +100,7 @@
         </p:txBody>
       </p:sp>
       <% y_coords = 2664490 %>
-      <% x_coords = 2349630 %>
+      <% x_coords = 3349630 %>
       <% images.each_with_index do |image, index| %>
       <p:pic>
         <p:nvPicPr>
@@ -124,7 +124,7 @@
         </p:blipFill>
         <p:spPr>
           <a:xfrm>
-            <a:off y="<%= 1503883 + (y_coords * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 5)) %>" />
+            <a:off y="<%= 1503883 + (y_coords * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 3)) %>" />
             <a:ext cx="3807449" cy="1925117"/>
           </a:xfrm>
           <a:prstGeom prst="rect">
@@ -147,7 +147,7 @@
         <p:spPr>
           <a:xfrm>
             <a:off y="<%= 3403883 + (y_coords * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 5)) %>"/>
-            <a:ext cy="1903883" cx="2160588"/>
+            <a:ext cy="1903883" cx="3807449"/>
           </a:xfrm>
           <a:prstGeom prst="rect">
           </a:prstGeom>
@@ -158,6 +158,7 @@
           </a:bodyPr>
           <a:lstStyle/>
           <a:p>
+            <a:pPr algn="c"/>
             <a:r>
               <a:rPr dirty="0" lang="en-US" smtClean="0"/>
               <a:t><%= image[0] %></a:t>
