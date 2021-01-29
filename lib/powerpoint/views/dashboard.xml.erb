@@ -256,6 +256,8 @@
             </a:xfrm>
           </p:spPr>
         </p:pic>
+      <% y_coords = 2664490 %>
+      <% x_coords = 3549630 %>
       <% data_count = 7 %>
       <% @data.each_with_index do |datum, index| %>
       <% data_count = data_count + 1 %>
@@ -271,8 +273,8 @@
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="278078" y="3581400"/>
-            <a:ext cx="10515600" cy="325563"/>
+            <a:off y="<%= 1503883 + (y_coords * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 3)) %>" />
+            <a:ext cx="3807449" cy="1925117"/>
           </a:xfrm>
         </p:spPr>
         <p:txBody>
