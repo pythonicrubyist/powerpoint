@@ -256,12 +256,9 @@
             </a:xfrm>
           </p:spPr>
         </p:pic>
-      <% data_count = 7 %>
-      <% @data.each_with_index do |datum, index| %>
-      <% data_count = data_count + 1 %>
       <p:sp>
         <p:nvSpPr>
-          <p:cNvPr id="<%= data_count %>" name="Subtitle 2"/>
+          <p:cNvPr id="8" name="Subtitle 2"/>
           <p:cNvSpPr>
             <a:spLocks noGrp="1"/>
           </p:cNvSpPr>
@@ -288,47 +285,11 @@
                   <a:schemeClr val="bg1"/>
                 </a:solidFill>
               </a:rPr>
-              <a:t><%= datum[0] %></a:t>
+              <a:t><%= @data['genders'] %></a:t>
             </a:r>
           </a:p>
         </p:txBody>
       </p:sp>
-      <% data_count = data_count + 1 %>
-      <p:sp>
-        <p:nvSpPr>
-          <p:cNvPr id="3" name="Subtitle 2"/>
-          <p:cNvSpPr>
-            <a:spLocks noGrp="1"/>
-          </p:cNvSpPr>
-          <p:nvPr>
-            <p:ph idx="1" type="subTitle"/>
-          </p:nvPr>
-        </p:nvSpPr>
-        <p:spPr>
-          <a:xfrm>
-            <a:off x="278078" y="3581400"/>
-            <a:ext cx="10515600" cy="325563"/>
-          </a:xfrm>
-        </p:spPr>
-        <p:txBody>
-          <a:bodyPr>
-            <a:noAutofit/>
-          </a:bodyPr>
-          <a:lstStyle/>
-          <a:p>
-            <a:pPr algn="l"/>
-            <a:r>
-              <a:rPr lang="en-US" dirty="0">
-                <a:solidFill>
-                  <a:schemeClr val="bg1"/>
-                </a:solidFill>
-              </a:rPr>
-              <a:t><%= datum[1] %></a:t>
-            </a:r>
-          </a:p>
-        </p:txBody>
-      </p:sp>
-      <% end %>
     </p:spTree>
     <p:extLst>
       <p:ext uri="{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}">
