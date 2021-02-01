@@ -324,7 +324,7 @@
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="2578078" y="2781400"/>
+            <a:off x="3078078" y="3081400"/>
             <a:ext cx="1215600" cy="325563"/>
           </a:xfrm>
         </p:spPr>
@@ -392,7 +392,7 @@
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="878078" y="2981400"/>
+            <a:off x="878078" y="2581400"/>
             <a:ext cx="715600" cy="325563"/>
           </a:xfrm>
         </p:spPr>
@@ -402,14 +402,25 @@
           </a:bodyPr>
           <a:lstStyle/>
           <a:p>
-            <a:pPr algn="l"/>
+            <a:pPr algn="c"/>
             <a:r>
               <a:rPr lang="en-US" dirty="0" sz ="1200">
                 <a:solidFill>
                   <a:schemeClr val="bg1"/>
                 </a:solidFill>
               </a:rPr>
-              <a:t>m<%= @data[:genders]['m'] %></a:t>
+              <a:t>Male</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
+            <a:pPr algn="c"/>
+            <a:r>
+              <a:rPr lang="en-US" dirty="0" sz ="1200">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+              </a:rPr>
+              <a:t><%= @data[:genders]['m'] %></a:t>
             </a:r>
           </a:p>
         </p:txBody>
@@ -426,7 +437,7 @@
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="2278078" y="2981400"/>
+            <a:off x="2278078" y="2581400"/>
             <a:ext cx="715600" cy="325563"/>
           </a:xfrm>
         </p:spPr>
@@ -436,6 +447,17 @@
           </a:bodyPr>
           <a:lstStyle/>
           <a:p>
+            <a:pPr algn="c"/>
+            <a:r>
+              <a:rPr lang="en-US" dirty="0" sz ="1200">
+                <a:solidFill>
+                  <a:schemeClr val="bg1"/>
+                </a:solidFill>
+              </a:rPr>
+              <a:t>Female</a:t>
+            </a:r>
+          </a:p>
+          <a:p>
             <a:pPr algn="l"/>
             <a:r>
               <a:rPr lang="en-US" dirty="0" sz ="1200">
@@ -443,7 +465,7 @@
                   <a:schemeClr val="bg1"/>
                 </a:solidFill>
               </a:rPr>
-              <a:t>f<%= @data[:genders]['f'] %></a:t>
+              <a:t><%= @data[:genders]['f'] %></a:t>
             </a:r>
           </a:p>
         </p:txBody>
@@ -460,7 +482,7 @@
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="3278078" y="2981400"/>
+            <a:off x="3478078" y="2581400"/>
             <a:ext cx="715600" cy="325563"/>
           </a:xfrm>
         </p:spPr>
@@ -470,7 +492,7 @@
           </a:bodyPr>
           <a:lstStyle/>
           <a:p>
-            <a:pPr algn="l"/>
+            <a:pPr algn="c"/>
             <a:r>
               <a:rPr lang="en-US" dirty="0" sz ="1200">
                 <a:solidFill>
@@ -481,14 +503,14 @@
             </a:r>
           </a:p>
           <a:p>
-            <a:pPr algn="l"/>
+            <a:pPr algn="c"/>
             <a:r>
               <a:rPr lang="en-US" dirty="0" sz ="1200">
                 <a:solidFill>
                   <a:schemeClr val="bg1"/>
                 </a:solidFill>
               </a:rPr>
-              <a:t>nil <%= @data[:genders][nil] %></a:t>
+              <a:t><%= @data[:genders][nil] %></a:t>
             </a:r>
           </a:p>
         </p:txBody>
