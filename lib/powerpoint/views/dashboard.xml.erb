@@ -421,11 +421,56 @@
         </p:blipFill>
         <p:spPr>
           <a:xfrm>
-            <a:off x="2043879" y="1849556"/>
+            <a:off x="2043879" y="2049556"/>
             <a:ext cx="481242" cy="481242"/>
           </a:xfrm>
         </p:spPr>
         </p:pic>
+        <p:sp>
+          <p:nvSpPr>
+            <p:cNvPr id="14" name="male symbol text"/>
+            <p:cNvSpPr>
+              <a:spLocks noGrp="1"/>
+            </p:cNvSpPr>
+            <p:nvPr>
+              <p:ph idx="1" type="subTitle"/>
+            </p:nvPr>
+          </p:nvSpPr>
+          <p:spPr>
+            <a:xfrm>
+              <a:off x="2043879" y="3081400"/>
+              <a:ext cx="715600" cy="325563"/>
+            </a:xfrm>
+          </p:spPr>
+          <p:txBody>
+            <a:bodyPr>
+              <a:noAutofit/>
+            </a:bodyPr>
+            <a:lstStyle/>
+            <a:p>
+              <a:pPr algn="c"/>
+              <a:r>
+                <a:rPr lang="en-US" dirty="0" sz ="1200">
+                  <a:solidFill>
+                    <a:schemeClr val="bg1"/>
+                  </a:solidFill>
+                </a:rPr>
+                <a:t>Male</a:t>
+              </a:r>
+            </a:p>
+            <a:p>
+              <a:pPr algn="c"/>
+              <a:r>
+                <a:rPr lang="en-US" dirty="0" sz ="1200">
+                  <a:solidFill>
+                    <a:schemeClr val="bg1"/>
+                  </a:solidFill>
+                </a:rPr>
+                <a:t><%= @data[:genders]['m'] %></a:t>
+              </a:r>
+            </a:p>
+          </p:txBody>
+        </p:sp>
         <p:pic>
           <p:nvPicPr>
             <p:cNvPr id="10" name="Female Symbol"/>
@@ -450,11 +495,56 @@
           </p:blipFill>
           <p:spPr>
             <a:xfrm>
-              <a:off x="2443879" y="1849556"/>
+              <a:off x="3443879" y="2049556"/>
               <a:ext cx="309370" cy="481242"/>
             </a:xfrm>
           </p:spPr>
         </p:pic>
+        <p:sp>
+          <p:nvSpPr>
+            <p:cNvPr id="15" name="genders"/>
+            <p:cNvSpPr>
+              <a:spLocks noGrp="1"/>
+            </p:cNvSpPr>
+            <p:nvPr>
+              <p:ph idx="1" type="subTitle"/>
+            </p:nvPr>
+          </p:nvSpPr>
+          <p:spPr>
+            <a:xfrm>
+              <a:off x="2278078" y="3081400"/>
+              <a:ext cx="915600" cy="325563"/>
+            </a:xfrm>
+          </p:spPr>
+          <p:txBody>
+            <a:bodyPr>
+              <a:noAutofit/>
+            </a:bodyPr>
+            <a:lstStyle/>
+            <a:p>
+              <a:pPr algn="ctr"/>
+              <a:r>
+                <a:rPr lang="en-US" dirty="0" sz ="1200">
+                  <a:solidFill>
+                    <a:schemeClr val="bg1"/>
+                  </a:solidFill>
+                </a:rPr>
+                <a:t>Female</a:t>
+              </a:r>
+            </a:p>
+            <a:p>
+              <a:pPr algn="ctr"/>
+              <a:r>
+                <a:rPr lang="en-US" dirty="0" sz ="1200">
+                  <a:solidFill>
+                    <a:schemeClr val="bg1"/>
+                  </a:solidFill>
+                </a:rPr>
+                <a:t><%= @data[:genders]['f'] %></a:t>
+              </a:r>
+            </a:p>
+          </p:txBody>
+        </p:sp>
         <p:pic>
           <p:nvPicPr>
             <p:cNvPr id="11" name="Other Symbol"/>
@@ -479,11 +569,56 @@
           </p:blipFill>
           <p:spPr>
             <a:xfrm>
-              <a:off x="3643879" y="1881600"/>
+              <a:off x="4643879" y="2081600"/>
               <a:ext cx="360932" cy="481242"/>
             </a:xfrm>
           </p:spPr>
         </p:pic>
+        <p:sp>
+          <p:nvSpPr>
+            <p:cNvPr id="16" name="genders"/>
+            <p:cNvSpPr>
+              <a:spLocks noGrp="1"/>
+            </p:cNvSpPr>
+            <p:nvPr>
+              <p:ph idx="1" type="subTitle"/>
+            </p:nvPr>
+          </p:nvSpPr>
+          <p:spPr>
+            <a:xfrm>
+              <a:off x="3478078" y="2581400"/>
+              <a:ext cx="715600" cy="325563"/>
+            </a:xfrm>
+          </p:spPr>
+          <p:txBody>
+            <a:bodyPr>
+              <a:noAutofit/>
+            </a:bodyPr>
+            <a:lstStyle/>
+            <a:p>
+              <a:pPr algn="ctr"/>
+              <a:r>
+                <a:rPr lang="en-US" dirty="0" sz ="1200">
+                  <a:solidFill>
+                    <a:schemeClr val="bg1"/>
+                  </a:solidFill>
+                </a:rPr>
+                <a:t>Other</a:t>
+              </a:r>
+            </a:p>
+            <a:p>
+              <a:pPr algn="ctr"/>
+              <a:r>
+                <a:rPr lang="en-US" dirty="0" sz ="1200">
+                  <a:solidFill>
+                    <a:schemeClr val="bg1"/>
+                  </a:solidFill>
+                </a:rPr>
+                <a:t><%= @data[:genders][nil] %></a:t>
+              </a:r>
+            </a:p>
+          </p:txBody>
+        </p:sp>
         <p:sp>
         <p:nvSpPr>
           <p:cNvPr id="12" name="genders"/>
@@ -530,7 +665,7 @@
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="2043879" y="4854623"/>
+            <a:off x="2043879" y="4054623"/>
             <a:ext cx="515600" cy="325563"/>
           </a:xfrm>
         </p:spPr>
@@ -548,141 +683,6 @@
                 </a:solidFill>
               </a:rPr>
               <a:t><%= graph_2_subtitle %></a:t>
-            </a:r>
-          </a:p>
-        </p:txBody>
-      </p:sp>
-      <p:sp>
-        <p:nvSpPr>
-          <p:cNvPr id="14" name="genders"/>
-          <p:cNvSpPr>
-            <a:spLocks noGrp="1"/>
-          </p:cNvSpPr>
-          <p:nvPr>
-            <p:ph idx="1" type="subTitle"/>
-          </p:nvPr>
-        </p:nvSpPr>
-        <p:spPr>
-          <a:xfrm>
-            <a:off x="878078" y="2581400"/>
-            <a:ext cx="715600" cy="325563"/>
-          </a:xfrm>
-        </p:spPr>
-        <p:txBody>
-          <a:bodyPr>
-            <a:noAutofit/>
-          </a:bodyPr>
-          <a:lstStyle/>
-          <a:p>
-            <a:pPr algn="c"/>
-            <a:r>
-              <a:rPr lang="en-US" dirty="0" sz ="1200">
-                <a:solidFill>
-                  <a:schemeClr val="bg1"/>
-                </a:solidFill>
-              </a:rPr>
-              <a:t>Male</a:t>
-            </a:r>
-          </a:p>
-          <a:p>
-            <a:pPr algn="c"/>
-            <a:r>
-              <a:rPr lang="en-US" dirty="0" sz ="1200">
-                <a:solidFill>
-                  <a:schemeClr val="bg1"/>
-                </a:solidFill>
-              </a:rPr>
-              <a:t><%= @data[:genders]['m'] %></a:t>
-            </a:r>
-          </a:p>
-        </p:txBody>
-      </p:sp>
-      <p:sp>
-        <p:nvSpPr>
-          <p:cNvPr id="15" name="genders"/>
-          <p:cNvSpPr>
-            <a:spLocks noGrp="1"/>
-          </p:cNvSpPr>
-          <p:nvPr>
-            <p:ph idx="1" type="subTitle"/>
-          </p:nvPr>
-        </p:nvSpPr>
-        <p:spPr>
-          <a:xfrm>
-            <a:off x="2278078" y="2581400"/>
-            <a:ext cx="915600" cy="325563"/>
-          </a:xfrm>
-        </p:spPr>
-        <p:txBody>
-          <a:bodyPr>
-            <a:noAutofit/>
-          </a:bodyPr>
-          <a:lstStyle/>
-          <a:p>
-            <a:pPr algn="ctr"/>
-            <a:r>
-              <a:rPr lang="en-US" dirty="0" sz ="1200">
-                <a:solidFill>
-                  <a:schemeClr val="bg1"/>
-                </a:solidFill>
-              </a:rPr>
-              <a:t>Female</a:t>
-            </a:r>
-          </a:p>
-          <a:p>
-            <a:pPr algn="ctr"/>
-            <a:r>
-              <a:rPr lang="en-US" dirty="0" sz ="1200">
-                <a:solidFill>
-                  <a:schemeClr val="bg1"/>
-                </a:solidFill>
-              </a:rPr>
-              <a:t><%= @data[:genders]['f'] %></a:t>
-            </a:r>
-          </a:p>
-        </p:txBody>
-      </p:sp>
-      <p:sp>
-        <p:nvSpPr>
-          <p:cNvPr id="16" name="genders"/>
-          <p:cNvSpPr>
-            <a:spLocks noGrp="1"/>
-          </p:cNvSpPr>
-          <p:nvPr>
-            <p:ph idx="1" type="subTitle"/>
-          </p:nvPr>
-        </p:nvSpPr>
-        <p:spPr>
-          <a:xfrm>
-            <a:off x="3478078" y="2581400"/>
-            <a:ext cx="715600" cy="325563"/>
-          </a:xfrm>
-        </p:spPr>
-        <p:txBody>
-          <a:bodyPr>
-            <a:noAutofit/>
-          </a:bodyPr>
-          <a:lstStyle/>
-          <a:p>
-            <a:pPr algn="ctr"/>
-            <a:r>
-              <a:rPr lang="en-US" dirty="0" sz ="1200">
-                <a:solidFill>
-                  <a:schemeClr val="bg1"/>
-                </a:solidFill>
-              </a:rPr>
-              <a:t>Other</a:t>
-            </a:r>
-          </a:p>
-          <a:p>
-            <a:pPr algn="ctr"/>
-            <a:r>
-              <a:rPr lang="en-US" dirty="0" sz ="1200">
-                <a:solidFill>
-                  <a:schemeClr val="bg1"/>
-                </a:solidFill>
-              </a:rPr>
-              <a:t><%= @data[:genders][nil] %></a:t>
             </a:r>
           </a:p>
         </p:txBody>
