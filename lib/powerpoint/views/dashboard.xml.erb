@@ -465,9 +465,6 @@
               <a:pPr algn="ctr"/>
               <a:r>
                 <a:rPr lang="en-US" dirty="0" sz ="1200">
-                  <a:solidFill>
-                    <a:schemeClr val="bg1"/>
-                  </a:solidFill>
                 </a:rPr>
                 <a:t><%= @data[:genders]['f'] %></a:t>
               </a:r>
@@ -630,7 +627,10 @@
           <a:p>
             <a:pPr algn="l"/>
             <a:r>
-              <a:rPr lang="en-US" dirty="0" sz="1200" />
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:rPr lang="en-US" dirty="0" sz="2400" b= "1"/>
               <a:t>Total posts in market</a:t>
             </a:r>
           </a:p>
@@ -666,7 +666,10 @@
           <a:p>
             <a:pPr algn="l"/>
             <a:r>
-              <a:rPr lang="en-US" dirty="0" sz="1200" />
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:rPr lang="en-US" dirty="0" sz="2400" b= "1"/>
               <a:t>Time spent in market</a:t>
             </a:r>
           </a:p>
@@ -702,7 +705,10 @@
           <a:p>
             <a:pPr algn="l"/>
             <a:r>
-              <a:rPr lang="en-US" dirty="0" sz="1200" />
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:rPr lang="en-US" dirty="0" sz="2400" b= "1"/>
               <a:t>Image posts</a:t>
             </a:r>
           </a:p>
@@ -738,7 +744,10 @@
           <a:p>
             <a:pPr algn="l"/>
             <a:r>
-              <a:rPr lang="en-US" dirty="0" sz="1200" />
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:rPr lang="en-US" dirty="0" sz="2400" b= "1"/>
               <a:t>Video posts</a:t>
             </a:r>
           </a:p>
@@ -774,7 +783,10 @@
           <a:p>
             <a:pPr algn="l"/>
             <a:r>
-              <a:rPr lang="en-US" dirty="0" sz="1200" />
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:rPr lang="en-US" dirty="0" sz="2400" b= "1"/>
               <a:t>Text posts</a:t>
             </a:r>
           </a:p>
@@ -810,8 +822,10 @@
           <a:p>
             <a:pPr algn="l"/>
             <a:r>
-              <a:srgbClr val="FFFFFF"/>
-              <a:rPr lang="en-US" dirty="0" sz="2400" b= "1"/>
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:rPr lang="en-US" dirty="0" sz="4800" b= "1"/>
               <a:t><%= @data[:total_posts] %></a:t>
             </a:r>
           </a:p>
@@ -847,8 +861,10 @@
           <a:p>
             <a:pPr algn="l"/>
             <a:r>
-              <a:srgbClr val="FFFFFF"/>
-              <a:rPr lang="en-US" dirty="0" sz="2400" b= "1"/>
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:rPr lang="en-US" dirty="0" sz="4800" b= "1"/>
               <a:t><%= @data[:log_time] %></a:t>
             </a:r>
           </a:p>
@@ -884,8 +900,10 @@
           <a:p>
             <a:pPr algn="l"/>
             <a:r>
-              <a:srgbClr val="FFFFFF"/>
-              <a:rPr lang="en-US" dirty="0" sz="2400" b= "1"/>
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:rPr lang="en-US" dirty="0" sz="4800" b= "1"/>
               <a:t><%= @data[:post_types][:image] %></a:t>
             </a:r>
           </a:p>
@@ -921,8 +939,10 @@
           <a:p>
             <a:pPr algn="l"/>
             <a:r>
-              <a:srgbClr val="FFFFFF"/>
-              <a:rPr lang="en-US" dirty="0" sz="2400" b= "1"/>
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:rPr lang="en-US" dirty="0" sz="4800" b= "1"/>
               <a:t><%= @data[:post_types][:video] %></a:t>
             </a:r>
           </a:p>
@@ -956,10 +976,12 @@
           </a:bodyPr>
           <a:lstStyle/>
           <a:p>
-            <a:pPr algn="ctr"/>
+            <a:pPr algn="l"/>
             <a:r>
-              <a:srgbClr val="FFFFFF"/>
-              <a:rPr lang="en-US" dirty="0" sz="2400" b= "1"/>
+              <a:solidFill>
+                <a:schemeClr val="bg1"/>
+              </a:solidFill>
+              <a:rPr lang="en-US" dirty="0" sz="4800" b= "1"/>
               <a:t><%= @data[:post_types][:text] %></a:t>
             </a:r>
           </a:p>
