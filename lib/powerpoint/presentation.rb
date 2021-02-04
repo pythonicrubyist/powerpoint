@@ -52,6 +52,10 @@ module Powerpoint
       @slides << Powerpoint::Slide::MultipleImage.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, logo: logo, images: images)
     end
 
+    def add_concept_slide(title, subtitle = nil, subtitle_2 = nil, logo ,images)
+      @slides << Powerpoint::Slide::MultipleImage.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, logo: logo, images: images)
+    end
+
     def add_image_slide(title, subtitle = nil,images)
       @slides << Powerpoint::Slide::Image.new(presentation: self, title: title, subtitle: subtitle)
     end
