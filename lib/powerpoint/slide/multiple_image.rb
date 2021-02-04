@@ -17,7 +17,10 @@ module Powerpoint
       end
 
       def save(extract_path, index)
+        puts extract_path
+        puts '----------------->'
         @images.each do |image|
+          puts image[0]
           copy_media(extract_path, image[0])
         end
 
