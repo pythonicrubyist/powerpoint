@@ -11,9 +11,13 @@ module Powerpoint
       attr_reader :title, :subtitle,:subtitle_2, :logo, :images
 
       def initialize(options={})
-        require_arguments [:title, :subtitle,:subtitle_2,:logo, :images], options
+        require_arguments [:title, :subtitle,:subtitle_2, :logo, :images], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
         @images = images
+        puts '---------logo_2--------->'
+        puts logo
+        puts '---------------------->'
+        @logo = logo
       end
 
       def save(extract_path, index)
