@@ -18,7 +18,7 @@ module Powerpoint
 
       def save(extract_path, index)
         @images.each do |image|
-          copy_media(extract_path, image[0])
+          copy_media(extract_path, image)
         end
         
         copy_media(extract_path, logo)
