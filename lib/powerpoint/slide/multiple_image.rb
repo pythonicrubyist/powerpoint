@@ -17,12 +17,15 @@ module Powerpoint
       end
 
       def save(extract_path, index)
-        puts @images.inspect
         @images.each do |image|
           copy_media(extract_path, image[0])
         end
 
         copy_media(extract_path, logo)
+
+        puts 'index'
+        puts index.inspect
+        puts 'index'
 
         save_rel_xml(extract_path, index)
         save_slide_xml(extract_path, index)
