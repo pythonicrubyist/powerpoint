@@ -84,6 +84,8 @@ module Powerpoint
 
         # Save slides
         slides.each_with_index do |slide, index|
+          puts slides
+          puts '--------------------->'
           slide.save(extract_path, index + 1)
         end
 
