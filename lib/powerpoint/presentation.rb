@@ -49,9 +49,6 @@ module Powerpoint
     end
 
     def add_multiple_image_slide(title, subtitle = nil, subtitle_2 = nil, logo ,images)
-      puts '-------logo------------->'
-      puts logo
-      puts '-------logo------------->'
       @slides << Powerpoint::Slide::MultipleImage.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, logo: logo, images: images)
     end
 
