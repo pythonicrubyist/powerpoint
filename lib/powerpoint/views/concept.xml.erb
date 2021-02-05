@@ -153,7 +153,7 @@
         </p:blipFill>
         <p:spPr>
           <a:xfrm>
-            <a:off y="<%= 1503883 + (y_coords * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 5)) %>" />
+            <a:off y ="1503883" x="360588" />
             <a:ext cy="1903883" cx="2160588" />
           </a:xfrm>
           <a:prstGeom prst="rect">
@@ -161,27 +161,6 @@
           </a:prstGeom>
         </p:spPr>
       </p:pic>
-      <p:sp>
-        <p:nvSpPr>
-          <p:cNvPr id="<%= index + 13 %>" name="Text <%= index + 2 %>">
-            <a:extLst>
-              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{5AC9585E-30BE-154E-9AAE-80B8019A6A1A}"/>
-              </a:ext>
-            </a:extLst>
-          </p:cNvPr>
-          <p:cNvSpPr txBox="1"/>
-          <p:nvPr/>
-        </p:nvSpPr>
-        <p:spPr>
-          <a:xfrm>
-            <a:off y="3403883 " x="360588"/>
-            <a:ext cy="1903883" cx="2160588"/>
-          </a:xfrm>
-          <a:prstGeom prst="rect">
-          </a:prstGeom>
-        </p:spPr>
-      </p:sp>
       <% end %>
     </p:spTree>
     <p:extLst>
