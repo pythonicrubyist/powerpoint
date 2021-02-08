@@ -53,7 +53,7 @@ module Powerpoint
     end
 
     def add_concept_slide(title, subtitle = nil, subtitle_2 = nil, logo ,images)
-      @slides << Powerpoint::Slide::Concept.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, logo: logo, , image_ratio: image_ratio, images: images)
+      @slides << Powerpoint::Slide::Concept.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, logo: logo, image_ratio: image_ratio, images: images)
     end
 
     def add_image_slide(title, subtitle = nil,images)
