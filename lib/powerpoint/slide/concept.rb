@@ -14,7 +14,23 @@ module Powerpoint
         require_arguments [:title, :subtitle,:subtitle_2, :logo, :image_information, :images], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
         @images = images
-         
+        slide_y = 5735412
+        slide_x = 11470824
+        slide_x_offset = 360588
+        slide_y_offset = 1283763
+        #image information = [width, height, ratio]
+        # if image is taller than wider
+        if (image_information[2] < 1)
+          @image_y_scale = slide_y
+          @image_x_scale = slide_y * image_information[2]
+          @image_x_offset = slide_x_offset - ((slide_x - @image_x_scale) / 2)
+          @image_y_offset = slide_y_offset
+        else
+          @image_y_scale = slide_x / image_information[2]
+          @image_x_scale = slide_x
+          @image_x_offset = slide_x_offset
+          @image_y_offset = slide_y_offset + ((slide_y - @image_y_scale)/2)
+        end
       end
 
       def save(extract_path, index)
@@ -28,13 +44,6 @@ module Powerpoint
         save_slide_xml(extract_path, index)
       end
 
-      def image_ratio(image_information)
-        if image_information[0] > image_information[1]
-          image_ratio = ['width',image_information[2]]
-        else
-          image_ratio = ['height',image_information[2]]
-        end
-      end
 
       def save_rel_xml(extract_path, index)
         render_view('concept_rel.xml.erb', "#{extract_path}/ppt/slides/_rels/slide#{index}.xml.rels", index: index)
