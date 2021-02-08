@@ -48,8 +48,8 @@ module Powerpoint
       @slides << Powerpoint::Slide::DescriptionPic.new(presentation: self, title: title, image_path: image_path, content: content)
     end
 
-    def add_multiple_image_slide(title, subtitle = nil, subtitle_2 = nil, logo ,images)
-      @slides << Powerpoint::Slide::MultipleImage.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, logo: logo, images: images)
+    def add_multiple_image_slide(title, subtitle = nil, subtitle_2 = nil, logo, image_ratio ,images)
+      @slides << Powerpoint::Slide::MultipleImage.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, logo: logo, image_ratio: image_ratio, images: images)
     end
 
     def add_concept_slide(title, subtitle = nil, subtitle_2 = nil, logo ,images)

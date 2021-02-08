@@ -8,12 +8,13 @@ module Powerpoint
     class Concept
       include Powerpoint::Util
 
-      attr_reader :title, :subtitle,:subtitle_2, :logo, :images
+      attr_reader :title, :subtitle,:subtitle_2, :logo, :image_ratio :images
 
       def initialize(options={})
-        require_arguments [:title, :subtitle,:subtitle_2, :logo, :images], options
+        require_arguments [:title, :subtitle,:subtitle_2, :logo, :image_ratio, :images], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
         @images = images
+        @image_ratio
       end
 
       def save(extract_path, index)
