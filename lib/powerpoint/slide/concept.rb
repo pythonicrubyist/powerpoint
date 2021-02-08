@@ -23,7 +23,7 @@ module Powerpoint
         if (image_information[2] < 1)
           @image_y_scale = slide_y
           @image_x_scale = (slide_y * image_information[2]).round
-          @image_x_offset = (slide_x_offset - ((slide_x - @image_x_scale) / 2)).round
+          @image_x_offset = (slide_x_offset + ((slide_x - @image_x_scale) / 2)).round
           @image_y_offset = slide_y_offset
         else
           @image_y_scale = (slide_x / image_information[2]).round
