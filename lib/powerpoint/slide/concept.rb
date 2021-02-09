@@ -20,7 +20,7 @@ module Powerpoint
         slide_y_offset = 1283763
         #image information = [width, height, ratio]
         # if image is taller than it is wider
-        if (image_information[2] < 1)
+        if (image_information[2] < 2)
           @image_y_scale = slide_y
           @image_x_scale = (slide_y * image_information[2]).round
           @image_x_offset = (slide_x_offset + ((slide_x - @image_x_scale) / 2)).round
