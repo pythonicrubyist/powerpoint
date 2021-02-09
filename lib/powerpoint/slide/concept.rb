@@ -31,6 +31,11 @@ module Powerpoint
           @image_x_offset = slide_x_offset
           @image_y_offset = (slide_y_offset + ((slide_y - @image_y_scale)/2)).round
         end
+
+         puts @image_y_scale
+         puts @image_x_scale
+         puts @image_x_offset
+          puts @image_y_offset
       end
 
       def save(extract_path, index)
