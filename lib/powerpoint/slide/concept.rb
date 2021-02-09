@@ -14,9 +14,9 @@ module Powerpoint
         require_arguments [:title, :subtitle,:subtitle_2, :logo, :image_information, :images], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
         @images = images
-        slide_y = 5735412
-        slide_x = 11470824
-        slide_x_offset = 360588
+        slide_y = 5535412
+        slide_x = 11070824
+        slide_x_offset = 560588
         slide_y_offset = 1283763
         #image information = [width, height, ratio]
         # if image is taller than it is wider
