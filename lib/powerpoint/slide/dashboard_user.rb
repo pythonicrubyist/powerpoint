@@ -21,7 +21,7 @@ module Powerpoint
         @images.each do |image|
           copy_media(extract_path, image[1])
         end
-
+        copy_media(extract_path, logo)
         save_rel_xml(extract_path, index)
         save_slide_xml(extract_path, index)
       end
