@@ -8,10 +8,10 @@ module Powerpoint
     class MultipleImage
       include Powerpoint::Util
 
-      attr_reader :title, :subtitle, :logo, :task_icon, :images
+      attr_reader :title, :subtitle, :page_number :logo, :task_icon, :images
 
       def initialize(options={})
-        require_arguments [:title, :subtitle, :logo, :task_icon, :images], options
+        require_arguments [:title, :subtitle, :page_number, :logo, :task_icon, :images], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
         @images = images
       end

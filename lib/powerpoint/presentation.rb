@@ -48,7 +48,7 @@ module Powerpoint
       @slides << Powerpoint::Slide::DescriptionPic.new(presentation: self, title: title, image_path: image_path, content: content)
     end
 
-    def add_multiple_image_slide(title, subtitle = nil, logo, task_icon ,images)
+    def add_multiple_image_slide(title, subtitle = nil, page_number, logo, task_icon ,images)
       @slides << Powerpoint::Slide::MultipleImage.new(presentation: self, title: title, subtitle: subtitle, task_icon: task_icon, logo: logo, images: images)
     end
 
