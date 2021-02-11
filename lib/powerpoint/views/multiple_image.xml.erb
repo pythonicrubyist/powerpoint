@@ -186,19 +186,23 @@
             <a:spAutoFit/>
           </a:bodyPr>
           <a:lstStyle/>
+          <% if image[1].present? %>
           <a:p>
             <a:r>
               <a:rPr dirty="0" lang="en-US" smtClean="0"/>
-              <a:t>Position: <%= index +1 %></a:t>
+              <a:t><%= image[2] %></a:t>
             </a:r>
             <a:endParaRPr dirty="0" lang="en-US"/>
           </a:p>
+          <% end %>
+          <% if image[1].present? %>
           <a:p>
             <a:r>
               <a:rPr dirty="0" lang="en-US" smtClean="0"/>
-              <a:t>Votes: <%= image[1] %></a:t>
+              <a:t><%= image[1] %></a:t>
             </a:r>
           </a:p>
+          <% end %>
         </p:txBody>
       </p:sp>
       <% end %>
