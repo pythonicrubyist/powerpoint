@@ -55,8 +55,8 @@
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="10558200" y="0"/>
-            <a:ext cx="1515600" cy="1325563"/>
+            <a:off x="250200" y="0"/>
+            <a:ext cx="10515600" cy="325563"/>
           </a:xfrm>
         </p:spPr>
         <p:txBody>
@@ -71,40 +71,41 @@
           </a:p>
         </p:txBody>
       </p:sp>
-      <p:sp>
-        <p:nvSpPr>
-          <p:cNvPr id="4" name="Title 3"/>
-          <p:cNvSpPr>
-            <a:spLocks noGrp="1"/>
-          </p:cNvSpPr>
+            <p:pic>
+        <p:nvPicPr>
+          <p:cNvPr id="6" name="Content Placeholder 3"/>
+          <p:cNvPicPr>
+            <a:picLocks noChangeAspect="1" noGrp="1"/>
+          </p:cNvPicPr>
           <p:nvPr>
-            <p:ph type="title"/>
+            <p:ph idx="1"/>
           </p:nvPr>
-        </p:nvSpPr>
+        </p:nvPicPr>
+        <p:blipFill>
+          <a:blip r:embed="rId2">
+            <a:extLst>
+              <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                <a14:useLocalDpi val="0" xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main"/>
+              </a:ext>
+            </a:extLst>
+          </a:blip>
+          <a:stretch>
+            <a:fillRect/>
+          </a:stretch>
+        </p:blipFill>
         <p:spPr>
           <a:xfrm>
-            <a:off x="250200" y="0"/>
-            <a:ext cx="10515600" cy="1325563"/>
+            <a:off x="10558200" y="0"/>
+            <a:ext cx="1515600" cy="325563"/>
           </a:xfrm>
         </p:spPr>
-        <p:txBody>
-          <a:bodyPr/>
-          <a:lstStyle/>
-          <a:p>
-            <a:pPr algn="l"/>
-            <a:r>
-              <a:rPr lang="en-US"  dirty="0" sz="1200"/>
-              <a:t><%= subtitle_2 %></a:t>
-            </a:r>
-          </a:p>
-        </p:txBody>
-      </p:sp>
+      </p:pic>
       <% y_coords = 2664490 %>
       <% x_coords = 3849630 %>
       <% images.each_with_index do |image, index| %>
       <p:pic>
         <p:nvPicPr>
-          <p:cNvPr id="<%= index + 5 %>" name="Content Placeholder <%= index + 2 %>">
+          <p:cNvPr id="<%= index + 6 %>" name="Content Placeholder <%= index + 3 %>">
             <a:extLst>
               <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
                 <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{A9A20F6E-12DB-C244-80E1-C21BB706AF8B}"/>

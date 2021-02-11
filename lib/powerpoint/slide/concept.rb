@@ -8,10 +8,10 @@ module Powerpoint
     class Concept
       include Powerpoint::Util
 
-      attr_reader :title, :subtitle,:subtitle_2, :logo, :image_information, :images
+      attr_reader :title, :subtitle,:logo, :task_icon, :image_information, :images
 
       def initialize(options={})
-        require_arguments [:title, :subtitle,:subtitle_2, :logo, :image_information, :images], options
+        require_arguments [:title, :subtitle,:logo, :task_icon, :image_information, :images], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
         @images = images
         slide_y = 5535412
@@ -39,6 +39,7 @@ module Powerpoint
         end
         
         copy_media(extract_path, logo)
+        copy_media(extract_path, task_icon)
 
         save_rel_xml(extract_path, index)
         save_slide_xml(extract_path, index)

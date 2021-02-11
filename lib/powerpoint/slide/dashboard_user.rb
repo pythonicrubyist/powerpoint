@@ -8,12 +8,13 @@ module Powerpoint
     class DashboardUser
       include Powerpoint::Util
 
-      attr_reader :title, :subtitle,:subtitle_2, :images
+      attr_reader :title, :subtitle,:logo, :images
 
       def initialize(options={})
-        require_arguments [:title, :subtitle,:subtitle_2, :images], options
+        require_arguments [:title, :subtitle,:logo, :images], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
         @images = images
+        @logo = File.basename(@logo)
       end
 
       def save(extract_path, index)

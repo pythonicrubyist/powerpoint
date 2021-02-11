@@ -48,24 +48,24 @@ module Powerpoint
       @slides << Powerpoint::Slide::DescriptionPic.new(presentation: self, title: title, image_path: image_path, content: content)
     end
 
-    def add_multiple_image_slide(title, subtitle = nil, subtitle_2 = nil, logo ,images)
-      @slides << Powerpoint::Slide::MultipleImage.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, logo: logo, images: images)
+    def add_multiple_image_slide(title, subtitle = nil, logo, task_icon ,images)
+      @slides << Powerpoint::Slide::MultipleImage.new(presentation: self, title: title, subtitle: subtitle, task_icon: task_icon, logo: logo, images: images)
     end
 
-    def add_concept_slide(title, subtitle = nil, subtitle_2 = nil, logo, image_information ,images)
-      @slides << Powerpoint::Slide::Concept.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, logo: logo, image_information: image_information, images: images)
+    def add_concept_slide(title, subtitle = nil, logo, task_icon, image_information ,images)
+      @slides << Powerpoint::Slide::Concept.new(presentation: self, title: title, subtitle: subtitle, logo: logo, task_icon: task_icon, image_information: image_information, images: images)
     end
 
     def add_image_slide(title, subtitle = nil,images)
       @slides << Powerpoint::Slide::Image.new(presentation: self, title: title, subtitle: subtitle)
     end
 
-    def add_dashboard_slide(title, subtitle = nil, subtitle_2 = nil, graph_1_title, graph_1_subtitle, graph_2_title, graph_2_subtitle, image_1, image_2, image_3, image_4, data)
-      @slides << Powerpoint::Slide::Dashboard.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, graph_1_title: graph_1_title, graph_1_subtitle: graph_1_subtitle, graph_2_title: graph_2_title, graph_2_subtitle: graph_2_subtitle, image_path: image_1, image_path_2: image_2, image_path_3: image_3, image_path_4: image_4, data: data)
+    def add_dashboard_slide(title, subtitle = nil, graph_1_title, graph_1_subtitle, graph_2_title, graph_2_subtitle, image_1, image_2, image_3, image_4, logo, data)
+      @slides << Powerpoint::Slide::Dashboard.new(presentation: self, title: title, subtitle: subtitle, graph_1_title: graph_1_title, graph_1_subtitle: graph_1_subtitle, graph_2_title: graph_2_title, graph_2_subtitle: graph_2_subtitle, image_path: image_1, image_path_2: image_2, image_path_3: image_3, image_path_4: image_4, logo: logo, data: data)
     end
 
-    def add_dashboard_user_slide(title, subtitle = nil, subtitle_2 = nil, images)
-      @slides << Powerpoint::Slide::DashboardUser.new(presentation: self, title: title, subtitle: subtitle, subtitle_2: subtitle_2, images: images)
+    def add_dashboard_user_slide(title, subtitle = nil, logo, images)
+      @slides << Powerpoint::Slide::DashboardUser.new(presentation: self, title: title, subtitle: subtitle, logo: logo, images: images)
     end
 
     def save(path)
