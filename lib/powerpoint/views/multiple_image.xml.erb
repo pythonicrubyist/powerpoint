@@ -53,7 +53,7 @@
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="158200" y="25000"/>
+            <a:off x="158200" y="15000"/>
             <a:ext cx="10515600" cy="325563"/>
           </a:xfrm>
         </p:spPr>
@@ -121,7 +121,7 @@
         </p:blipFill>
         <p:spPr>
           <a:xfrm>
-            <a:off x="108200" y="458200"/>
+            <a:off x="158200" y="458200"/>
             <a:ext cx="625563" cy="625563"/>
           </a:xfrm>
         </p:spPr>
@@ -160,9 +160,16 @@
       <% 8.times do |index| %>
       <p:sp>
         <p:nvSpPr>
-          <p:cNvPr id="12" name="sub block">
+          <p:cNvPr id="<%= index + 5 %>" name="sub block">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{6C3BF3FD-E527-5341-A738-EAD2C7B34678}"/>
+              </a:ext>
+            </a:extLst>
           </p:cNvPr>
-          <p:cNvSpPr/>
+          <p:cNvSpPr txBox="1">
+            <a:spLocks/>
+          </p:cNvSpPr>
           <p:nvPr/>
         </p:nvSpPr>
         <p:spPr>
@@ -186,7 +193,7 @@
       <% images.each_with_index do |image, index| %>
       <p:pic>
         <p:nvPicPr>
-          <p:cNvPr id="<%= index + 5 %>" name="Content Placeholder <%= index + 2 %>">
+          <p:cNvPr id="<%= index + 13 %>" name="Content Placeholder <%= index + 2 %>">
             <a:extLst>
               <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
                 <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{A9A20F6E-12DB-C244-80E1-C21BB706AF8B}"/>
