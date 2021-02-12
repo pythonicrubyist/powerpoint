@@ -157,38 +157,6 @@
       </p:pic>
       <% y_coords = 2664490 %>
       <% x_coords = 2392098 %>
-      <% 10.times do |index| %>
-      <p:sp>
-        <p:nvSpPr>
-          <p:cNvPr id="<%= index + 5 %>" name="sub block">
-            <a:extLst>
-              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
-                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{6C3BF3FD-E527-5341-A738-EAD2C7B34678}"/>
-              </a:ext>
-            </a:extLst>
-          </p:cNvPr>
-          <p:cNvSpPr txBox="1">
-            <a:spLocks/>
-          </p:cNvSpPr>
-          <p:nvPr/>
-        </p:nvSpPr>
-        <p:spPr>
-          <a:xfrm>
-            <a:off y="<%= 1503883 + (y_coords * (index/5).floor) %>" x="<%= 231510 + (x_coords*(index.to_i % 5)) %>" />
-            <a:ext cy="1943883" cx="2160588" />
-          </a:xfrm>
-          <a:prstGeom prst="rect">
-            <a:avLst/>
-          </a:prstGeom>
-          <a:solidFill>
-            <a:schemeClr val="tx2">
-              <a:lumMod val="80000"/>
-              <a:lumOff val="80000"/>
-            </a:schemeClr>
-          </a:solidFill>
-        </p:spPr>
-      </p:sp>
-      <% end %>
       <% images.each_with_index do |image, index| %>
       <p:pic>
         <p:nvPicPr>
