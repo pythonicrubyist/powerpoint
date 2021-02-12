@@ -53,7 +53,7 @@
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="158200" y="15000"/>
+            <a:off x="158200" y="35000"/>
             <a:ext cx="10515600" cy="325563"/>
           </a:xfrm>
         </p:spPr>
@@ -157,7 +157,7 @@
       </p:pic>
       <% y_coords = 2664490 %>
       <% x_coords = 2349630 %>
-      <% 8.times do |index| %>
+      <% 10.times do |index| %>
       <p:sp>
         <p:nvSpPr>
           <p:cNvPr id="<%= index + 5 %>" name="sub block">
@@ -175,7 +175,7 @@
         <p:spPr>
           <a:xfrm>
             <a:off y="<%= 1503883 + (y_coords * (index/5).floor) %>" x="<%= 360588 + (x_coords*(index.to_i % 5)) %>" />
-            <a:ext cy="1903883" cx="2160588" />
+            <a:ext cy="1943883" cx="2160588" />
           </a:xfrm>
           <a:prstGeom prst="rect">
             <a:avLst/>
@@ -242,7 +242,7 @@
           <% if image[1].present? %>
           <a:p>
             <a:r>
-              <a:rPr dirty="0" lang="en-US" smtClean="0"/>
+              <a:rPr dirty="0" lang="en-US" smtClean="0" sz="1400"/>
               <a:t><%= image[2] %></a:t>
             </a:r>
             <a:endParaRPr dirty="0" lang="en-US"/>
@@ -251,7 +251,7 @@
           <% if image[1].present? %>
           <a:p>
             <a:r>
-              <a:rPr dirty="0" lang="en-US" smtClean="0"/>
+              <a:rPr dirty="0" lang="en-US" smtClean="0" sz="1400"/>
               <a:t><%= image[1] %></a:t>
             </a:r>
           </a:p>
