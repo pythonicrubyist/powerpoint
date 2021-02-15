@@ -27,7 +27,7 @@
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="1038200" y="508200"/>
+            <a:off x="1038200" y="608200"/>
             <a:ext cx="10515600" cy="325563"/>
           </a:xfrm>
         </p:spPr>
@@ -37,7 +37,11 @@
           <a:p>
             <a:pPr algn="l"/>
             <a:r>
-              <a:rPr lang="en-US" b="1" dirty="0" sz="2800"/>
+              <a:rPr lang="en-US" b="1" dirty="0" sz="2800">
+                <a:solidFill>
+                  <a:schemeClr val="dk2"/>
+                </a:solidFill>
+              </a:rPr>
               <a:t><%= title %></a:t>
             </a:r>
           </a:p>
@@ -63,7 +67,11 @@
           <a:p>
             <a:pPr algn="l"/>
             <a:r>
-              <a:rPr lang="en-US"  dirty="0" sz="800"/>
+              <a:rPr lang="en-US" b="1"  dirty="0" sz="800"
+                <a:solidFill>
+                  <a:schemeClr val="dk2"/>
+                </a:solidFill>
+              </a:rPr>
               <a:t><%= subtitle %></a:t>
             </a:r>
           </a:p>
@@ -89,7 +97,11 @@
           <a:p>
             <a:pPr algn="r"/>
             <a:r>
-              <a:rPr lang="en-US"  dirty="0" sz="800"/>
+              <a:rPr lang="en-US" b="1"  dirty="0" sz="800">
+                <a:solidFill>
+                  <a:schemeClr val="dk2"/>
+                </a:solidFill>
+              </a:rPr>
               <a:t><%= page_number %></a:t>
             </a:r>
           </a:p>
@@ -208,7 +220,11 @@
           <% if image[1].present? %>
           <a:p>
             <a:r>
-              <a:rPr dirty="0" lang="en-US" smtClean="0" sz="1400"/>
+              <a:rPr dirty="0" b="1" lang="en-US" smtClean="0" sz="1400">
+               <a:solidFill>
+                  <a:schemeClr val="dk2"/>
+                </a:solidFill>
+              </a:rPr>
               <a:t><%= image[2] %></a:t>
             </a:r>
             <a:endParaRPr dirty="0" lang="en-US"/>
@@ -217,7 +233,11 @@
           <% if image[1].present? %>
           <a:p>
             <a:r>
-              <a:rPr dirty="0" lang="en-US" smtClean="0" sz="1400"/>
+              <a:rPr dirty="0" b="1" lang="en-US" smtClean="0" sz="1400">
+               <a:solidFill>
+                  <a:schemeClr val="dk2"/>
+                </a:solidFill>
+              </a:rPr>
               <a:t><%= image[1] %></a:t>
             </a:r>
           </a:p>
