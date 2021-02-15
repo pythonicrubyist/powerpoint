@@ -18,7 +18,7 @@ module Powerpoint
         @image_name_2 = File.basename(image_path_2)
         @image_name_3 = File.basename(image_path_3)
         @image_name_4 = File.basename(image_path_4)
-        @logo = File.basename(logo)
+        @logo_name = File.basename(logo)
       end
 
       def save(extract_path, index)

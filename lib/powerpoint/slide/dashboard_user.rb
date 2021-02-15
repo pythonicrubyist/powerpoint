@@ -14,7 +14,7 @@ module Powerpoint
         require_arguments [:title, :subtitle,:logo, :images], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
         @images = images
-        @logo = File.basename(logo)
+        @logo_name = File.basename(logo)
       end
 
       def save(extract_path, index)
