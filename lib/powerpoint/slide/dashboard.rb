@@ -22,6 +22,12 @@ module Powerpoint
       end
 
       def save(extract_path, index)
+        puts image_path
+        puts image_path_2
+        puts image_path_3
+        puts image_path_4
+        puts logo
+        puts '------------------->'
         copy_media(extract_path, image_path)
         copy_media(extract_path, image_path_2)
         copy_media(extract_path, image_path_3)
