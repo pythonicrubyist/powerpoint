@@ -17,17 +17,15 @@
       </p:grpSpPr>
       <p:sp>
         <p:nvSpPr>
-          <p:cNvPr id="2" name="Title 1"/>
+          <p:cNvPr id="2" name="Title"/>
           <p:cNvSpPr>
             <a:spLocks noGrp="1"/>
           </p:cNvSpPr>
-          <p:nvPr>
-            <p:ph type="title"/>
-          </p:nvPr>
+          <p:nvPr />
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="250200" y="508200"/>
+            <a:off x="221510" y="518200"/>
             <a:ext cx="10515600" cy="325563"/>
           </a:xfrm>
         </p:spPr>
@@ -37,7 +35,12 @@
           <a:p>
             <a:pPr algn="l"/>
             <a:r>
-              <a:rPr lang="en-US" b="1" dirty="0" sz="2400"/>
+              <a:rPr lang="en-US" b="1" dirty="0" sz="2800" >
+                <a:solidFill>
+                  <a:schemeClr val="dk2" />
+                </a:solidFill>
+                <a:latin typeface="Arvo" panose="02000000000000000000" pitchFamily="2" charset="77"/>
+              </a:rPr>
               <a:t><%= title %></a:t>
             </a:r>
           </a:p>
@@ -45,18 +48,46 @@
       </p:sp>
       <p:sp>
         <p:nvSpPr>
-          <p:cNvPr id="3" name="Title 2"/>
+          <p:cNvPr id="3" name="subtitle"/>
           <p:cNvSpPr>
             <a:spLocks noGrp="1"/>
           </p:cNvSpPr>
-          <p:nvPr>
-            <p:ph type="title"/>
-          </p:nvPr>
+          <p:nvPr />
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="250200" y="0"/>
-            <a:ext cx="10515600" cy="325563"/>
+            <a:off x="221510" y="145000"/>
+            <a:ext cx="10515600" cy="125563"/>
+          </a:xfrm>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr lang="en-US" b="1"  dirty="0" sz="800" >
+              <a:solidFill>
+                  <a:schemeClr val="dk2" />
+                </a:solidFill>
+              </a:rPr>
+              <a:t><%= subtitle %></a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="3" name="Page number"/>
+          <p:cNvSpPr>
+            <a:spLocks noGrp="1"/>
+          </p:cNvSpPr>
+          <p:nvPr />
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="8631800" y="152400"/>
+            <a:ext cx="55000" cy="325563"/>
           </a:xfrm>
         </p:spPr>
         <p:txBody>
@@ -65,15 +96,19 @@
           <a:p>
             <a:pPr algn="r"/>
             <a:r>
-              <a:rPr lang="en-US"  dirty="0" sz="1200"/>
-              <a:t><%= subtitle %></a:t>
+              <a:rPr lang="en-US" b="1"  dirty="0" sz="800" >
+              <a:solidFill>
+                  <a:schemeClr val="dk2" />
+                </a:solidFill>
+              </a:rPr>
+              <a:t><%= page_number %></a:t>
             </a:r>
           </a:p>
         </p:txBody>
       </p:sp>
-            <p:pic>
+      <p:pic>
         <p:nvPicPr>
-          <p:cNvPr id="6" name="Content Placeholder 3"/>
+          <p:cNvPr id="6" name="Butterfly logo small"/>
           <p:cNvPicPr>
             <a:picLocks noChangeAspect="1" noGrp="1"/>
           </p:cNvPicPr>
@@ -95,8 +130,8 @@
         </p:blipFill>
         <p:spPr>
           <a:xfrm>
-            <a:off x="10558200" y="0"/>
-            <a:ext cx="1515600" cy="325563"/>
+            <a:off x="11334927" y="145000"/>
+            <a:ext cx="625563" cy="221032"/>
           </a:xfrm>
         </p:spPr>
       </p:pic>
