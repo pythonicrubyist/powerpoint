@@ -60,7 +60,7 @@ module Powerpoint
       @slides << Powerpoint::Slide::Image.new(presentation: self, title: title, subtitle: subtitle)
     end
 
-    def add_dashboard_slide(title, subtitle = nil, page_number, graph_1_title, graph_1_subtitle, graph_2_title image_1, image_2, image_3, image_4, logo, data)
+    def add_dashboard_slide(title, subtitle = nil, page_number, graph_1_title, graph_1_subtitle, graph_2_title, image_1, image_2, image_3, image_4, logo, data)
       @slides << Powerpoint::Slide::Dashboard.new(presentation: self, title: title, subtitle: subtitle, page_number: page_number, graph_1_title: graph_1_title, graph_1_subtitle: graph_1_subtitle, graph_2_title: graph_2_title, image_path: image_1, image_path_2: image_2, image_path_3: image_3, image_path_4: image_4, logo: logo, data: data)
     end
 
