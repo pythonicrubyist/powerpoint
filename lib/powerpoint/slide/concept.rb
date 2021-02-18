@@ -17,7 +17,7 @@ module Powerpoint
         slide_y = 5535412
         slide_x = 11070824
         slide_x_offset = 560588
-        slide_y_offset = 1283763
+        slide_y_offset = 1183763
         #image information = [width, height, ratio]
         # if image is taller than it is wider
         if (image_information[2] < 2)
