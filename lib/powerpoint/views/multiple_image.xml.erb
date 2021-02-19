@@ -189,8 +189,8 @@
         </p:blipFill>
         <p:spPr>
           <a:xfrm>
-            <a:off y="<%= 1503883 + (y_coords * (index/5).floor) %>" x="<%= 231510 + (x_coords*(index.to_i % 5)) %>" />
-            <a:ext cy="1943883" cx="2138271" />
+            <a:off x="<%= image[3][2] + (x_coords*(index.to_i % 5)) %>" y="<%= image[3][3] + (y_coords * (index/5).floor) %>" />
+            <a:ext cx="<%= image[3][0] %>" cy="<%= image[3][1]" />
           </a:xfrm>
           <a:prstGeom prst="rect">
             <a:avLst/>
@@ -216,7 +216,7 @@
             <a:spAutoFit/>
           </a:bodyPr>
           <a:lstStyle/>
-          <% if image[1].present? %>
+          <% if image[2].present? %>
           <a:p>
             <a:r>
               <a:rPr dirty="0" b="1" lang="en-US" smtClean="0" sz="1400">
