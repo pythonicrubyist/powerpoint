@@ -167,6 +167,36 @@
       <% y_coords = 2664490 %>
       <% x_coords = 2392098 %>
       <% images.each_with_index do |image, index| %>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="12" name="sub block">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{6C3BF3FD-E527-5341-A738-EAD2C7B34678}"/>
+              </a:ext>
+            </a:extLst>
+          </p:cNvPr>
+          <p:cNvSpPr txBox="1">
+            <a:spLocks/>
+          </p:cNvSpPr>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="<%= 231510 + (x_coords*(index.to_i % 5)) %>" y="<%= 1503883 + (y_coords * (index/5).floor) %>" />
+            <a:ext cx="2138268" cy="1943880"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln w="12700">
+            <a:solidFill>
+              <a:schemeClr val="tx2"/>
+            </a:solidFill>
+          </a:ln>
+        </p:spPr>
+      </p:sp>
       <p:pic>
         <p:nvPicPr>
           <p:cNvPr id="<%= index + 13 %>" name="Content Placeholder <%= index + 2 %>">
