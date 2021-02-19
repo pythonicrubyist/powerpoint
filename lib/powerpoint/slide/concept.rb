@@ -14,23 +14,10 @@ module Powerpoint
         require_arguments [:title, :subtitle,:page_number,:logo, :task_icon, :image_information, :images], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
         @images = images
-        slide_y = 5535412
-        slide_x = 11070824
-        slide_x_offset = 560588
-        slide_y_offset = 1083763
-        #image information = [width, height, ratio]
-        # if image is taller than it is wider
-        if (image_information[2] < 2)
-          @image_y_scale = slide_y
-          @image_x_scale = (slide_y * image_information[2]).round
-          @image_x_offset = (slide_x_offset + ((slide_x - @image_x_scale) / 2)).round
-          @image_y_offset = slide_y_offset
-        else
-          @image_y_scale = (slide_x / image_information[2]).round
-          @image_x_scale = slide_x
-          @image_x_offset = slide_x_offset
-          @image_y_offset = (slide_y_offset + ((slide_y - @image_y_scale)/2)).round
-        end
+        @image_y_scale = image_information[1]
+        @image_x_scale = image_information[0]
+        @image_x_offset = image_information[2]
+        @image_y_offset = image_information[3]
       end
 
       def save(extract_path, index)
