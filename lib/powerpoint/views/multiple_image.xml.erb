@@ -189,7 +189,7 @@
         </p:blipFill>
         <p:spPr>
           <a:xfrm>
-            <a:off x="<%= 231510 - (image[3][2]/1.2.floor)+ (x_coords*(index.to_i % 5)) %>" y="<%= 1503883 - (image[3][3]/1.2).floor + (y_coords * (index/5).floor) %>" />
+            <a:off x="<%= image[3][2] - ((231510 - image[3][2])/2).floor + (x_coords*(index.to_i % 5)) - (image[3][0]/2).floor %>" y="<%= image[3][3] - ((1503883 - image[3][3])/2).floor + (y_coords * (index/5).floor) %>" />
             <a:ext cx="<%= image[3][0] %>" cy="<%= image[3][1] %>" />
           </a:xfrm>
           <a:prstGeom prst="rect">
