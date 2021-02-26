@@ -198,6 +198,33 @@
       <% end %>
       <% legend.each_with_index do |graph_key| %>
         <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="12" name="sub block header">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{6C3BF3FD-E527-5341-A738-EAD2C7B34678}"/>
+              </a:ext>
+            </a:extLst>
+          </p:cNvPr>
+          <p:cNvSpPr txBox="1">
+            <a:spLocks/>
+          </p:cNvSpPr>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="221510" y="6339800"/>
+            <a:ext cx="246221" cy="246221"/>
+          </a:xfrm>
+          <a:prstGeom prst="ellipse">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="<%= graph_key['colour'][1..-1] %>"/>
+          </a:solidFill>
+        </p:spPr>
+      </p:sp>
+        <p:sp>
           <p:nvSpPr>
             <p:cNvPr id="3" name="subtitle"/>
             <p:cNvSpPr>
@@ -223,11 +250,12 @@
                   </a:solidFill>
                   <a:latin typeface="WORK SANS SEMIBOLD ROMAN" pitchFamily="2" charset="77"/>
                 </a:rPr>
-                <a:t><%= graph_key['caption'] %></a:t>
+                <a:t><%= graph_key['label'] %></a:t>
               </a:r>
             </a:p>
           </p:txBody>
         </p:sp>
+
       <% end %>
     </p:spTree>
     <p:extLst>
