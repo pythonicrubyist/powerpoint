@@ -196,7 +196,7 @@
         </p:spPr>
       </p:pic>
       <% end %>
-      <% xposition = "1000000" %>
+      <% x_pos_legend = 1000000 %>
       <% legend.each_with_index do |graph_key| %>
         <p:sp>
         <p:nvSpPr>
@@ -214,7 +214,7 @@
         </p:nvSpPr>
         <p:spPr>
           <a:xfrm>
-            <a:off x="<%= 221510 + xposition %> " y="6339800"/>
+            <a:off x="<%= 221510 + (x_pos_legend * index.to_i) %> " y="6339800"/>
             <a:ext cx="246221" cy="246221"/>
           </a:xfrm>
           <a:prstGeom prst="ellipse">
@@ -235,7 +235,7 @@
           </p:nvSpPr>
           <p:spPr>
             <a:xfrm>
-              <a:off x="<%= 421510 + xposition %>" y="6339800"/>
+              <a:off x="<%= 421510 + (x_pos_legend * index.to_i) %>" y="6339800"/>
               <a:ext cx="1000000" cy="125563"/>
             </a:xfrm>
           </p:spPr>
