@@ -196,6 +196,57 @@
         </p:spPr>
       </p:pic>
       <% end %>
+      <% legend.each_with_index do |graph_key| %>
+        <p:sp>
+          <p:nvSpPr>
+            <p:cNvPr id="3" name="subtitle"/>
+            <p:cNvSpPr>
+              <a:spLocks noGrp="1"/>
+            </p:cNvSpPr>
+            <p:nvPr />
+          </p:nvSpPr>
+          <p:spPr>
+            <a:xfrm>
+              <a:off x="241510" y="6339800"/>
+              <a:ext cx="10515600" cy="125563"/>
+            </a:xfrm>
+          </p:spPr>
+          <p:txBody>
+            <a:bodyPr/>
+            <a:lstStyle/>
+            <a:p>
+              <a:pPr algn="l"/>
+              <a:r>
+                <a:rPr lang="en-US" b="1"  dirty="0" sz="800" >
+                <a:solidFill>
+                    <a:schemeClr val="dk2" />
+                  </a:solidFill>
+                  <a:latin typeface="WORK SANS SEMIBOLD ROMAN" pitchFamily="2" charset="77"/>
+                </a:rPr>
+                <a:t><%= graph_key['color'] %></a:t>
+              </a:r>
+            </a:p>
+          </p:txBody>
+        </p:sp>
+          <p:spPr>
+            <a:xfrm>
+              <a:off x="221510" y="6339800"/>
+              <a:ext cx="246221" cy="246221"/>
+            </a:xfrm>
+            <a:prstGeom prst="ellipse">
+              <a:avLst/>
+            </a:prstGeom>
+            <a:solidFill>
+              <a:schemeClr val="accent3">
+                <a:lumMod val="75000"/>
+              </a:schemeClr>
+            </a:solidFill>
+            <a:ln>
+              <a:noFill/>
+            </a:ln>
+          </p:spPr>
+        </p:sp>
+      <% end %>
     </p:spTree>
     <p:extLst>
       <p:ext uri="{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}">
