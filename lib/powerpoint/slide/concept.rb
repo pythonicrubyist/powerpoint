@@ -8,11 +8,12 @@ module Powerpoint
     class Concept
       include Powerpoint::Util
 
-      attr_reader :title, :subtitle,:page_number,:logo, :task_icon, :image_information, :images, :data
+      attr_reader :title, :subtitle,:page_number,:logo, :task_icon, :image_information, :legend, :images
 
       def initialize(options={})
-        require_arguments [:title, :subtitle,:page_number,:logo, :task_icon, :image_information, :images, :data], options
+        require_arguments [:title, :subtitle,:page_number,:logo, :task_icon, :image_information, :legend,:images], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
+        @legend = legend
         @images = images
         @image_y_scale = image_information[1]
         @image_x_scale = image_information[0]
