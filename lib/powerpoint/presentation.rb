@@ -56,6 +56,10 @@ module Powerpoint
       @slides << Powerpoint::Slide::Concept.new(presentation: self, title: title, subtitle: subtitle, page_number: page_number, logo: logo, task_icon: task_icon, image_information: image_information, images: images)
     end
 
+    def add_collage_slide(title, subtitle = nil, page_number, logo, task_icon, image_information ,images)
+      @slides << Powerpoint::Slide::Collage.new(presentation: self, title: title, subtitle: subtitle, page_number: page_number, logo: logo, task_icon: task_icon, image_information: image_information, images: images)
+    end
+
     def add_image_slide(title, subtitle = nil,images)
       @slides << Powerpoint::Slide::Image.new(presentation: self, title: title, subtitle: subtitle)
     end
