@@ -53,7 +53,7 @@ module Powerpoint
     end
 
     def add_gallery_slide(title, subtitle = nil, question, page_number, logo, task_icon ,images)
-      @slides << Powerpoint::Slide::MultipleImage.new(presentation: self, title: title, subtitle: subtitle, question: question, page_number: page_number, task_icon: task_icon, logo: logo, images: images)
+      @slides << Powerpoint::Slide::Gallery.new(presentation: self, title: title, subtitle: subtitle, question: question, page_number: page_number, task_icon: task_icon, logo: logo, images: images)
     end
 
     def add_concept_slide(title, subtitle = nil, page_number, logo, task_icon, image_information ,images, legend)
