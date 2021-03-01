@@ -5,7 +5,7 @@ require 'erb'
 
 module Powerpoint
   module Slide
-    class MultipleImage
+    class Gallery
       include Powerpoint::Util
 
       attr_reader :title, :subtitle, :question, :page_number, :logo, :task_icon, :images
