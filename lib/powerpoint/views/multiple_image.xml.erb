@@ -276,6 +276,7 @@
           </a:p>
           <% end %>
           <% if image[4].present? %>
+          <% image[4].each do |comment| %>
           <a:p>
             <a:r>
               <a:rPr dirty="0" b="1" lang="en-US" smtClean="0" sz="1400">
@@ -284,9 +285,21 @@
                 </a:solidFill>
                 <a:latin typeface="WORK SANS SEMIBOLD ROMAN" pitchFamily="2" charset="77"/>
               </a:rPr>
-              <a:t><%= image[4] %></a:t>
+              <a:t><%= comment[0] %></a:t>
             </a:r>
           </a:p>
+          <a:p>
+            <a:r>
+              <a:rPr dirty="0" b="1" lang="en-US" smtClean="0" sz="1400">
+              <a:solidFill>
+                  <a:schemeClr val="dk2" />
+                </a:solidFill>
+                <a:latin typeface="WORK SANS SEMIBOLD ROMAN" pitchFamily="2" charset="77"/>
+              </a:rPr>
+              <a:t><%= comment[1] %></a:t>
+            </a:r>
+          </a:p>
+          <% end>
           <% end %>
         </p:txBody>
       </p:sp>
