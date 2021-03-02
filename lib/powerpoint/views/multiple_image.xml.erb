@@ -275,6 +275,19 @@
             </a:r>
           </a:p>
           <% end %>
+          <% if image[3].present? %>
+          <a:p>
+            <a:r>
+              <a:rPr dirty="0" b="1" lang="en-US" smtClean="0" sz="1400">
+              <a:solidFill>
+                  <a:schemeClr val="dk2" />
+                </a:solidFill>
+                <a:latin typeface="WORK SANS SEMIBOLD ROMAN" pitchFamily="2" charset="77"/>
+              </a:rPr>
+              <a:t><%= image[3] %></a:t>
+            </a:r>
+          </a:p>
+          <% end %>
         </p:txBody>
       </p:sp>
       <% end %>
