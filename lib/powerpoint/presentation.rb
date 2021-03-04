@@ -52,8 +52,8 @@ module Powerpoint
       @slides << Powerpoint::Slide::MultipleImage.new(presentation: self, title: title, subtitle: subtitle, page_number: page_number, task_icon: task_icon, logo: logo, images: images)
     end
 
-    def add_comment_slide(title, subtitle = nil, page_number, logo, task_icon ,comments)
-      @slides << Powerpoint::Slide::Comment.new(presentation: self, title: title, subtitle: subtitle, page_number: page_number, task_icon: task_icon, logo: logo, comments: comments)
+    def add_comment_slide(title, subtitle = nil, user, page_number, logo, task_icon ,comments)
+      @slides << Powerpoint::Slide::Comment.new(presentation: self, title: title, subtitle: subtitle, user: user, page_number: page_number, task_icon: task_icon, logo: logo, comments: comments)
     end
 
     def add_gallery_slide(title, subtitle = nil, question, page_number, logo, task_icon ,images)

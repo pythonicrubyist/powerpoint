@@ -166,6 +166,37 @@
           </a:xfrm>
         </p:spPr>
       </p:pic>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="7" name="user"/>
+          <p:cNvSpPr>
+            <a:spLocks noGrp="1"/>
+          </p:cNvSpPr>
+          <p:nvPr />
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="156083" y="1150837"/>
+            <a:ext cx="10515600" cy="325563"/>
+          </a:xfrm>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="l"/>
+            <a:r>
+              <a:rPr lang="en-US" b="1" dirty="0" sz="1400" >
+                <a:solidFill>
+                  <a:schemeClr val="dk2" />
+                </a:solidFill>
+                <a:latin typeface="Arvo" panose="02000000000000000000" pitchFamily="2" charset="77"/>
+              </a:rPr>
+              <a:t><%= user %></a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
       <% y_coords = 621510 %>
       <% x_coords = 145000 %>
       <% comments.each_with_index do |comment, index| %>
@@ -177,7 +208,7 @@
           </p:nvSpPr>
           <p:spPr>
             <a:xfrm>
-              <a:off y="<%= 1150837 + (y_coords * (index.to_i % 4)) %>" x="<%= 231510 + (x_coords * (index/4).floor) %>"/>
+              <a:off y="<%= 1550837 + (y_coords * (index.to_i % 4)) %>" x="<%= 231510 + (x_coords * (index/4).floor) %>"/>
               <a:ext cy="1903883" cx="2160588"/>
             </a:xfrm>
             <a:prstGeom prst="rect">
