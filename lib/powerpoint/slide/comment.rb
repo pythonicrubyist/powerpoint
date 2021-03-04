@@ -8,7 +8,7 @@ module Powerpoint
     class Comment
       include Powerpoint::Util
 
-      attr_reader :title, :subtitle, :user :page_number, :logo, :task_icon, :comments
+      attr_reader :title, :subtitle, :user, :page_number, :logo, :task_icon, :comments
 
       def initialize(options={})
         require_arguments [:title, :subtitle, :user, :page_number, :logo, :task_icon, :comments], options
