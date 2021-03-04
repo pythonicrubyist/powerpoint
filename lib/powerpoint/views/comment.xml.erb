@@ -166,7 +166,7 @@
           </a:xfrm>
         </p:spPr>
       </p:pic>
-      <% y_coords = 221510 %>
+      <% y_coords = 621510 %>
       <% x_coords = 145000 %>
       <% comments.each_with_index do |comment, index| %>
         <p:sp>
@@ -177,7 +177,7 @@
           </p:nvSpPr>
           <p:spPr>
             <a:xfrm>
-              <a:off y="<%= 1150837 + (y_coords * (index.to_i % 5)) %>" x="<%= 231510 + (x_coords * (index/5).floor) %>"/>
+              <a:off y="<%= 1150837 + (y_coords * (index.to_i % 4)) %>" x="<%= 231510 + (x_coords * (index/4).floor) %>"/>
               <a:ext cy="1903883" cx="2160588"/>
             </a:xfrm>
             <a:prstGeom prst="rect">
