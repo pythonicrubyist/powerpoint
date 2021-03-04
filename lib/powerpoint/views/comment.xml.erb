@@ -169,7 +169,7 @@
       <% y_coords = 221510 %>
       <% x_coords = 145000 %>
       <% comments.each_with_index do |comment, index| %>
-       <p:sp>
+        <p:sp>
           <p:nvSpPr>
             <p:cNvPr id="<%= index + 13 %>" name="Text <%= index + 2 %>" />
             <p:cNvSpPr txBox="1"/>
@@ -209,7 +209,9 @@
               </a:rPr>
               <a:t><%= comment[1] %></a:t>
             </a:r>
-          </a:p>     
+          </a:p>
+          </p:txBody>
+        </p:sp>     
       <% end %>
     </p:spTree>
     <p:extLst>

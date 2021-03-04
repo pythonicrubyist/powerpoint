@@ -13,8 +13,7 @@ module Powerpoint
       def initialize(options={})
         require_arguments [:title, :subtitle, :page_number, :logo, :task_icon, :comments], options
         options.each {|k, v| instance_variable_set("@#{k}", v)}
-        puts comments.inspect
-        puts '************'
+
       end
 
       def save(extract_path, index)
