@@ -277,20 +277,6 @@
             <a:spAutoFit/>
           </a:bodyPr>
           <a:lstStyle/>
-          <% if image[2].present? %>
-          <a:p>
-            <a:r>
-              <a:rPr dirty="0" b="1" lang="en-US" smtClean="0" sz="1400">
-              <a:solidFill>
-                  <a:schemeClr val="dk2" />
-                </a:solidFill>
-                <a:latin typeface="WORK SANS SEMIBOLD ROMAN" pitchFamily="2" charset="77"/>
-              </a:rPr>
-              <a:t><%= image[2] %></a:t>
-            </a:r>
-            <a:endParaRPr dirty="0" lang="en-US"/>
-          </a:p>
-          <% end %>
           <% if image[1].present? %>
           <a:p>
             <a:r>
@@ -302,7 +288,36 @@
               </a:rPr>
               <a:t><%= image[1] %></a:t>
             </a:r>
+            <a:endParaRPr dirty="0" lang="en-US"/>
           </a:p>
+          <% end %>
+          <% if image[2].present? %>
+          <% image[2].each do |questions|
+          <a:p>
+            <a:r>
+              <a:rPr dirty="0" b="1" lang="en-US" smtClean="0" sz="1400">
+              <a:solidFill>
+                  <a:schemeClr val="dk2" />
+                </a:solidFill>
+                <a:latin typeface="WORK SANS SEMIBOLD ROMAN" pitchFamily="2" charset="77"/>
+              </a:rPr>
+              <a:t><%= questions[0] %></a:t>
+            </a:r>
+          </a:p>
+          <% questions[1].each do |answer| %>
+            <a:p>
+              <a:r>
+                <a:rPr dirty="0" b="1" lang="en-US" smtClean="0" sz="1400">
+                <a:solidFill>
+                    <a:schemeClr val="dk2" />
+                  </a:solidFill>
+                  <a:latin typeface="WORK SANS SEMIBOLD ROMAN" pitchFamily="2" charset="77"/>
+                </a:rPr>
+                <a:t><%= answer %></a:t>
+              </a:r>
+            </a:p>
+          <% end %>
+          <% end %>
           <% end %>
         </p:txBody>
       </p:sp>
