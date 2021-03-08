@@ -288,6 +288,7 @@
               </a:rPr>
               <a:t><%= image[1] %></a:t>
             </a:r>
+            <a:br/>
             <a:endParaRPr dirty="0" lang="en-US"/>
           </a:p>
           <% end %>
@@ -303,6 +304,8 @@
               </a:rPr>
               <a:t><%= questions[0] %></a:t>
             </a:r>
+             <a:br/>
+            <a:endParaRPr dirty="0" lang="en-US"/>
           </a:p>
           <% questions[1].each do |answer| %>
             <a:p>
@@ -315,6 +318,8 @@
                 </a:rPr>
                 <a:t><%= answer %></a:t>
               </a:r>
+              <a:br/>
+              <a:endParaRPr dirty="0" lang="en-US"/>
             </a:p>
           <% end %>
           <% end %>
