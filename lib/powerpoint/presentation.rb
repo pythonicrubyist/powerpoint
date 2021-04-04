@@ -22,6 +22,16 @@ module Powerpoint
       end
     end
 
+    def add_extended_intro(title, image_path, image_path_2,subtitle = nil,subtitle_2 = nil, coords = {})
+      existing_intro_slide = @slides.select {|s| s.class == Powerpoint::Slide::ExtendedIntro}[0]
+      slide = Powerpoint::Slide::ExtendedIntro.new(presentation: self, title: title, subtitle: subtitle, image_path: image_path, image_path_2: image_path_2, subtitle_2: subtitle_2, coords: coords)
+      if existing_intro_slide
+        @slides[@slides.index(existing_intro_slide)] = slide 
+      else
+        @slides.insert 0, slide
+      end
+    end
+
     def add_textual_slide(title, content = [])
       @slides << Powerpoint::Slide::Textual.new(presentation: self, title: title, content: content)
     end
@@ -36,6 +46,38 @@ module Powerpoint
 
     def add_picture_description_slide(title, image_path, content = [])
       @slides << Powerpoint::Slide::DescriptionPic.new(presentation: self, title: title, image_path: image_path, content: content)
+    end
+
+    def add_multiple_image_slide(title, subtitle = nil, page_number, logo, task_icon ,images)
+      @slides << Powerpoint::Slide::MultipleImage.new(presentation: self, title: title, subtitle: subtitle, page_number: page_number, task_icon: task_icon, logo: logo, images: images)
+    end
+
+    def add_comment_slide(title, subtitle = nil, user, page_number, logo, task_icon ,comments)
+      @slides << Powerpoint::Slide::Comment.new(presentation: self, title: title, subtitle: subtitle, user: user, page_number: page_number, task_icon: task_icon, logo: logo, comments: comments)
+    end
+
+    def add_gallery_slide(title, subtitle = nil, question, page_number, logo, task_icon ,images)
+      @slides << Powerpoint::Slide::Gallery.new(presentation: self, title: title, subtitle: subtitle, question: question, page_number: page_number, task_icon: task_icon, logo: logo, images: images)
+    end
+
+    def add_concept_slide(title, subtitle = nil, page_number, logo, task_icon, image_information ,images, legend)
+      @slides << Powerpoint::Slide::Concept.new(presentation: self, title: title, subtitle: subtitle, page_number: page_number, logo: logo, task_icon: task_icon, image_information: image_information, images: images, legend: legend)
+    end
+
+    def add_collage_slide(title, subtitle = nil, page_number, logo, task_icon, image_information ,images)
+      @slides << Powerpoint::Slide::Collage.new(presentation: self, title: title, subtitle: subtitle, page_number: page_number, logo: logo, task_icon: task_icon, image_information: image_information, images: images)
+    end
+
+    def add_image_slide(title, subtitle = nil,images)
+      @slides << Powerpoint::Slide::Image.new(presentation: self, title: title, subtitle: subtitle)
+    end
+
+    def add_dashboard_slide(title, subtitle = nil, page_number, graph_1_title, graph_1_subtitle, graph_2_title, image_1, image_2, image_3, image_4, logo, data)
+      @slides << Powerpoint::Slide::Dashboard.new(presentation: self, title: title, subtitle: subtitle, page_number: page_number, graph_1_title: graph_1_title, graph_1_subtitle: graph_1_subtitle, graph_2_title: graph_2_title, image_path: image_1, image_path_2: image_2, image_path_3: image_3, image_path_4: image_4, logo: logo, data: data)
+    end
+
+    def add_dashboard_user_slide(title, subtitle = nil, page_number, logo, images)
+      @slides << Powerpoint::Slide::DashboardUser.new(presentation: self, title: title, subtitle: subtitle,page_number: page_number, logo: logo, images: images)
     end
 
     def save(path)
@@ -70,7 +112,7 @@ module Powerpoint
     end
 
     def file_types
-      slides.map {|slide| slide.file_type if slide.respond_to? :file_type }.compact.uniq
+      
     end
   end
 end

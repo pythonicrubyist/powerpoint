@@ -2,9 +2,10 @@
 <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
   <Default ContentType="application/xml" Extension="xml"/>
   <Default ContentType="application/vnd.openxmlformats-package.relationships+xml" Extension="rels"/>
-  <% file_types.each do |type| %>
-  <Default ContentType="image/<%= type %>" Extension="<%= type %>"/>
-  <% end %>
+  <Default ContentType="image/png" Extension="png"/>
+  <Default ContentType="image/jpg" Extension="jpg"/>
+  <Default ContentType="image/jpeg" Extension="jpeg"/>
+  <Default ContentType="image/gif" Extension="gif"/>
   <Override ContentType="application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml" PartName="/ppt/presentation.xml"/>
   <Override ContentType="application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml" PartName="/ppt/slideMasters/slideMaster1.xml"/>
   <% slides.each_with_index do |slide, index| %>
@@ -12,7 +13,7 @@
   <% end %>
   <Override ContentType="application/vnd.openxmlformats-officedocument.presentationml.presProps+xml" PartName="/ppt/presProps.xml"/>
   <Override ContentType="application/vnd.openxmlformats-officedocument.presentationml.viewProps+xml" PartName="/ppt/viewProps.xml"/>
-  <Override ContentType="application/vnd.openxmlformats-officedocument.theme+xml" PartName="/ppt/theme/theme1.xml"/>
+  <Override ContentType="application/vnd.openxmlformats-officedocument.theme+xml" PartName="/ppt/theme/theme2.xml"/>
   <Override ContentType="application/vnd.openxmlformats-officedocument.presentationml.tableStyles+xml" PartName="/ppt/tableStyles.xml"/>
   <Override ContentType="application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml" PartName="/ppt/slideLayouts/slideLayout1.xml"/>
   <Override ContentType="application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml" PartName="/ppt/slideLayouts/slideLayout2.xml"/>

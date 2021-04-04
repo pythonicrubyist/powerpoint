@@ -11,15 +11,15 @@ module Powerpoint
       b = merge_variables(binding, variables)
       data = renderer.result(b)
 
-      File.open(path, 'w') { |f| f << data }
+      File.open(path, 'w') { |f| f << data.squish!.gsub('> <', '><') }
     end
 
     def read_template(filename)
       File.read("#{Powerpoint::VIEW_PATH}/#{filename}")
     end
 
-    def require_arguments(required_argements, argements)
-      raise ArgumentError unless required_argements.all? {|required_key| argements.keys.include? required_key}
+    def require_arguments(required_arguements, arguements)
+      raise ArgumentError unless required_arguements.all? {|required_key| arguements.keys.include? required_key}
     end
 
     def copy_media(extract_path, image_path)
